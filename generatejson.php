@@ -37,9 +37,9 @@
 		        $koma = $row["Koma"];
 		        $vouleuths = $row["Name"]." ".$row["Last"];
 		        array_push($link,$row);
-		        $node = Array( "Party"=>$koma );
+		        $node = $koma;
 		        array_push($nodes,$node);
-		        $node = Array( "Deputy"=>$vouleuths );
+		        $node = $vouleuths;
 		        array_push($nodes,$node);
 
 
@@ -60,14 +60,24 @@
 
 		
 		//print_r($nodes);
-		$nodes = Array("name" => "main","size" => "50","icon"=>"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg", "id"=>"1");
-		$link = Array("source" => "0","target" => "0");
+		$JSONnodes = Array("name" => "main","size" => 500,"icon"=>"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg", "id"=>"0");
+		
 		$json = Array("nodes"=>Array(),"links" => Array());
+		array_push($json["nodes"], $JSONnodes);
 
 		//print_r($json);
 
-		array_push($json["nodes"], $nodes);
-		array_push($json["links"], $link);
+		foreach ($nodes as $key => $value) {
+			$JSONnodes = Array("name" => $value,"size" => 500,"icon"=>"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg", "id"=>"0");
+			array_push($json["nodes"], $JSONnodes);
+		}
+
+		
+
+		$JSONlink = Array("source" => 0,"target" => 0);
+		array_push($json["links"], $JSONlink);
+
+
 
 		$json = json_encode($json);
 
