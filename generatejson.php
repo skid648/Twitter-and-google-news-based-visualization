@@ -38,7 +38,7 @@
 		        $vouleuths = $row["Name"]." ".$row["Last"];
 		        $url = $row["url"];
 		        array_push($link,$row);
-		        $node = Array("node" => $koma,"url" => $url);
+		        $node = Array("node" => $koma,"url" => GetImage($koma));
 		        array_push($nodes,$node);
 		        $node = Array("node" => $vouleuths,"url" => $url);
 		        array_push($nodes,$node);
@@ -88,6 +88,21 @@
 		fclose($myfile);
 		
 		$conn->close();
+
+		function GetImage($name){
+
+			$google_search_api = "https://www.googleapis.com/customsearch/v1";
+			$key = "AIzaSyDrIcRT3ETSei8Rhh09StVO2dUwrudWPn0";
+			$id="010381646192131644412:zp1d2xj-tmk";
+			$google_search_api = $google_search_api."?key=".$key;
+			$google_search_api = $google_search_api."&cx=".$id;
+			$google_search_api = $google_search_api."&q=".$name;
+			$google_search_api = $google_search_api.'&searchType=image';
+			$body = file_get_contents($google_search_api);
+			$json = json_decode($body);
+			$link = $json->items[0]->link;
+			return $link;
+		}
 
 		?>
 	</body>
