@@ -30,7 +30,7 @@
 		    // output data of each row
 		    while($row = $result->fetch_assoc()) {
 		        //echo "Onoma: " . $row["FirstName"]. " - Epitheto: " . $row["LastName"]. "<br>";
-		        //echo $row["Name"]." ".$row["Last"]." ".$row["Koma"]."<br>";
+		        echo $row["Name"]." ".$row["Last"]." ".$row["Koma"]."<br>";
 		        //array_push($deputies,$row["Name"]." ".$row["Last"]);
 		        //array_push($parties,$row["Koma"]);
 		        //var_dump($row);
@@ -68,7 +68,7 @@
 		//print_r($json);
 
 		foreach ($nodes as $key => $value) {
-			$JSONnodes = Array("name" => $value,"size" => 500,"icon"=>"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg", "id"=>"0");
+			$JSONnodes = Array("name" => $value,"size" => 500,"icon"=>"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg", "id"=>$key);
 			array_push($json["nodes"], $JSONnodes);
 		}
 

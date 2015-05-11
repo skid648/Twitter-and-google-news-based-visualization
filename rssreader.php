@@ -119,7 +119,7 @@
 				    
 				    //$link = GetImage($key);
 				    //echo "<div style='overflow:hidden; text-align:center; width:220px; height:220px; float:left; border-radius:250px;'><img style='width:auto; height:200px;' src=".$link."></img>".$key."</div>";
-				    $sql = "INSERT INTO Hot (Name) VALUES ('".$key."')";
+				    $sql = "INSERT INTO Hot (Name,image_url ) VALUES ('".$key."','".GetImage($key)."')";
 
 					if ($conn->query($sql) === TRUE) {
 					    //echo "done";
@@ -143,7 +143,7 @@
 		} 
 
 		function GetImage($name){
-			
+
 			$google_search_api = "https://www.googleapis.com/customsearch/v1";
 			$key = "AIzaSyDrIcRT3ETSei8Rhh09StVO2dUwrudWPn0";
 			$id="010381646192131644412:zp1d2xj-tmk";
