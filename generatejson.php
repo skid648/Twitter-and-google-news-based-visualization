@@ -41,7 +41,7 @@
 
 		        array_push($link,$row);//push entire row to create link
 
-		        $node = Array("node" => $vouleuths,"url" => $url); //create row for deputy
+		        $node = Array("node" => $vouleuths,"url" => $url,"Type" => "D"); //create row for deputy
 		        array_push($nodes,$node);
 		        $found = false;
 		        
@@ -58,7 +58,7 @@
 
 		        }else{
 
-		        $node = Array("node" => $koma,"url" => GetImage($koma)); //create row for party
+		        $node = Array("node" => $koma,"url" => GetImage($koma),"Type" => "P"); //create row for party
 		        array_push($nodes,$node);
 
 		        }
@@ -95,20 +95,22 @@
 		array_push($json["nodes"], $JSONnodes);
 
 		//print_r($json);
-		$numberOfNodes = 0;
+		
 		foreach ($nodes as $key => $value) {
-			$JSONnodes = Array("name" => $value["node"],"size" => 500,"icon"=>$value["url"], "id"=>$key);
+
+			$JSONnodes = Array("name" => $value["node"],"size" => 500,"icon"=>$value["url"], "id"=>$key, "Type"=> $value["Type"]);
 			array_push($json["nodes"], $JSONnodes);
-			$numberOfNodes ++;
+			
+
 		}
 
 		
-		for ($i=0; $i <= $numberOfNodes ; $i++) { 
+		
 			
-		$JSONlink = Array("source" => 0,"target" => $i);
-		array_push($json["links"], $JSONlink);
+		/*$JSONlink = Array("source" => 0,"target" => $i);
+		array_push($json["links"], $JSONlink);*/
 
-		}
+		
 
 		foreach ($link as $key => $value) {
 
@@ -123,6 +125,12 @@
 						echo "<br></b> value: <b><br>";
 						print_r($value);
 						echo "<br></b></br>";
+						if($value["Type"] == "P"){
+
+							$JSONlink = Array("source" => 0,"target" => $key);
+							array_push($json["links"], $JSONlink);
+
+						}
 			}
 
 		}
