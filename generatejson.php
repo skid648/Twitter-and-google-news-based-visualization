@@ -119,18 +119,27 @@
 						$source_party = $value["Koma"];
 									
 			
-			foreach ($json["nodes"] as $key => $value) {
+			foreach ($json["nodes"] as $innerKey => $innerValue) {
 						echo "<br> key: <b><br>";
-						print_r($key);
+						print_r($innerKey);
 						echo "<br></b> value: <b><br>";
-						print_r($value);
+						print_r($innerValue);
 						echo "<br></b></br>";
-						if($value["Type"] == "P"){
+						if($innerValue["Type"] == "P"){
 
-							$JSONlink = Array("source" => 0,"target" => $key);
+							$JSONlink = Array("source" => 0,"target" => $innerKey);
 							array_push($json["links"], $JSONlink);
 
+							if($innerValue == $source_party){
+
+								$indexOfDeputy = array_search($deputy, $json["nodes"]);
+
+								$JSONlink = Array("source" => $indexOfDeputy,"target" => $innerKey);
+								array_push($json["links"], $JSONlink);
+
+							}
 						}
+
 			}
 
 		}
