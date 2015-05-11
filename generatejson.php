@@ -30,18 +30,46 @@
 		    // output data of each row
 		    while($row = $result->fetch_assoc()) {
 		        //echo "Onoma: " . $row["FirstName"]. " - Epitheto: " . $row["LastName"]. "<br>";
-		        echo $row["Name"]." ".$row["Last"]." ".$row["Koma"]."<br>";
+		       // echo $row["Name"]." ".$row["Last"]." ".$row["Koma"]."<br>";
 		        //array_push($deputies,$row["Name"]." ".$row["Last"]);
 		        //array_push($parties,$row["Koma"]);
 		        //var_dump($row);
 		        $koma = $row["Koma"];
 		        $vouleuths = $row["Name"]." ".$row["Last"];
 		        $url = $row["url"];
-		        array_push($link,$row);
-		        $node = Array("node" => $koma,"url" => GetImage($koma));
+
+
+		        array_push($link,$row);//push entire row to create link
+
+		        $node = Array("node" => $vouleuths,"url" => $url); //create row for deputy
 		        array_push($nodes,$node);
-		        $node = Array("node" => $vouleuths,"url" => $url);
+		        $found = false;
+		        
+		       
+		        foreach ($nodes as $value) {
+		        	
+		        	if($koma === $value["node"]){
+		        		
+		        		$found = true;
+		        	}
+		        }
+
+		        if($found){
+
+		        }else{
+
+		        $node = Array("node" => $koma,"url" => GetImage($koma)); //create row for party
 		        array_push($nodes,$node);
+
+		        }
+		        
+			    
+			       
+			        
+			        
+		    	
+
+		        
 
 
 		    }
@@ -60,7 +88,7 @@
 		echo "<br>========NODES===========<br>";
 
 		
-		//print_r($nodes);
+		print_r($nodes);
 		$JSONnodes = Array("name" => "main","size" => 500,"icon"=>"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg", "id"=>"0");
 		
 		$json = Array("nodes"=>Array(),"links" => Array());
