@@ -20,7 +20,7 @@
 		    die("Connection failed: " . $conn->connect_error);
 		} 
 
-		$sql = "SELECT vouleutes.FirstName as Name , vouleutes.LastName as Last, vouleutes.Komma as Koma
+		$sql = "SELECT vouleutes.FirstName as Name , vouleutes.LastName as Last, vouleutes.Komma as Koma, Hot.image_url as url
 				FROM Hot,vouleutes
 				Where vouleutes.LastName = Hot.Name";
 
@@ -36,10 +36,11 @@
 		        //var_dump($row);
 		        $koma = $row["Koma"];
 		        $vouleuths = $row["Name"]." ".$row["Last"];
+		        $url = $row["url"];
 		        array_push($link,$row);
-		        $node = $koma;
+		        $node = Array("node" => $koma,"url" => $url);
 		        array_push($nodes,$node);
-		        $node = $vouleuths;
+		        $node = Array("node" => $vouleuths,"url" => $url);
 		        array_push($nodes,$node);
 
 
@@ -68,7 +69,7 @@
 		//print_r($json);
 
 		foreach ($nodes as $key => $value) {
-			$JSONnodes = Array("name" => $value,"size" => 500,"icon"=>"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg", "id"=>$key);
+			$JSONnodes = Array("name" => $value["node"],"size" => 500,"icon"=>$value["url"], "id"=>$key);
 			array_push($json["nodes"], $JSONnodes);
 		}
 
