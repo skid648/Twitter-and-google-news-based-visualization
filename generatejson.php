@@ -77,7 +77,7 @@
 		    echo "0 results";
 		}
 
-		echo "<br>=======LINKS============<br>";
+		//echo "<br>=======LINKS============<br>";
 
 
 		//array_multisort($link);
@@ -85,32 +85,52 @@
 
 
 
-		echo "<br>========NODES===========<br>";
+		//echo "<br>========NODES===========<br>";
 
 		
-		print_r($nodes);
+		//print_r($nodes);
 		$JSONnodes = Array("name" => "main","size" => 500,"icon"=>"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg", "id"=>"0");
 		
 		$json = Array("nodes"=>Array(),"links" => Array());
 		array_push($json["nodes"], $JSONnodes);
 
 		//print_r($json);
-
+		$numberOfNodes = 0;
 		foreach ($nodes as $key => $value) {
 			$JSONnodes = Array("name" => $value["node"],"size" => 500,"icon"=>$value["url"], "id"=>$key);
 			array_push($json["nodes"], $JSONnodes);
+			$numberOfNodes ++;
 		}
 
 		
-
-		$JSONlink = Array("source" => 0,"target" => 0);
+		for ($i=0; $i <= $numberOfNodes ; $i++) { 
+			
+		$JSONlink = Array("source" => 0,"target" => $i);
 		array_push($json["links"], $JSONlink);
 
+		}
+
+		foreach ($link as $key => $value) {
+
+				
+						$deputy = $value["Name"]." ".$value["Last"];
+						$source_party = $value["Koma"];
+									
+			
+			foreach ($json["nodes"] as $key => $value) {
+						echo "<br> key: <b><br>";
+						print_r($key);
+						echo "<br></b> value: <b><br>";
+						print_r($value);
+						echo "<br></b></br>";
+			}
+
+		}
 
 
 		$json = json_encode($json);
 
-		print_r($json);
+		//print_r($json);
 		$myfile = fopen("data/data.json", "w") or die("Unable to open file!");
 		fwrite($myfile, $json);
 		fclose($myfile);
