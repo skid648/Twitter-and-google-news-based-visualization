@@ -22,7 +22,7 @@
 
 var width = window.innerWidth;
 var height = window.innerHeight;
-
+var r = 6;
 
 var color = d3.scale.category20();
 
@@ -45,7 +45,7 @@ d3.json("../../../data/data.json", function(error, graph) {
       .data(graph.links)
     .enter().append("line")
       .attr("class", "link")
-      .style("stroke-width", function(d) { return Math.sqrt(d.value); });
+      .style("stroke-width", "2");
 
   var node = svg.selectAll(".node")
       .data(graph.nodes)
@@ -114,8 +114,10 @@ d3.json("../../../data/data.json", function(error, graph) {
         .attr("x2", function(d) { return d.target.x; })
         .attr("y2", function(d) { return d.target.y; });
 
-    node.attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; });
+    /*node.attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });*/
+        node.attr("cx", function(d) { return d.x = Math.max(r, Math.min(width - r, d.x)); })
+        .attr("cy", function(d) { return d.y = Math.max(r, Math.min(height - r, d.y)); });
 
     imgs.attr("x", function(d) { return d.x -75; })
         .attr("y", function(d) { return d.y -75; });
