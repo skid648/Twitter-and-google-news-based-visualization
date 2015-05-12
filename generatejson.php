@@ -130,7 +130,7 @@
 							foreach ($json["nodes"] as $key2 => $value2) {
 								if($value2["Type"] == "P" && $value2["name"] == $DeputyParty){
 
-									echo "Vrhka to komma tou vouleuth einai to :".$value2["name"]." kai einai sth thesi:".$key2."<br>";
+									echo "Vrhka to komma tou vouleuth".$deputy." einai to :".$value2["name"]." kai einai sth thesi:".$key2."<br>";
 									$JSONlink = Array("source" => $key2,"target" => $innerKey);
 									array_push($json["links"], $JSONlink);	
 
@@ -162,6 +162,7 @@
 			$google_search_api = $google_search_api."&cx=".$id;
 			$google_search_api = $google_search_api."&q=".$name;
 			$google_search_api = $google_search_api.'&searchType=image';
+			$google_search_api = preg_replace('/\s+/', '', $google_search_api);
 			$body = file_get_contents($google_search_api);
 			$json = json_decode($body);
 			$link = $json->items[0]->link;
