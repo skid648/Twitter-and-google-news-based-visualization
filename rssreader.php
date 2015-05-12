@@ -149,7 +149,7 @@
 			$id="010381646192131644412:zp1d2xj-tmk";
 			$google_search_api = $google_search_api."?key=".$key;
 			$google_search_api = $google_search_api."&cx=".$id;
-			$google_search_api = $google_search_api."&q=".$name;
+			$google_search_api = $google_search_api."&q=".$name."+Πολιτικός";
 			$google_search_api = $google_search_api.'&searchType=image';
 			$body = file_get_contents($google_search_api);
 			$json = json_decode($body);
