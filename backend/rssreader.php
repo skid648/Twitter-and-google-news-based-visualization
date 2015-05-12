@@ -383,14 +383,14 @@
 		function GenerateTweetJson($name){
 
 		$name = greeklish($name);
-		$api_URL = 'https://stream.twitter.com/1.1/statuses/filter.json';//'https://api.twitter.com/1.1/search/tweets.json';
-		$API_parameters = '?track='.$name;//'&include_entities=true&result_type=recent&lang=el&count=70';
+		$api_URL = 'https://api.twitter.com/1.1/search/tweets.json';
+		$API_parameters = '&include_entities=true&result_type=recent&lang=el&count=70';
 
 		$bearertok = "AAAAAAAAAAAAAAAAAAAAAC4CUAAAAAAAe4fo6tVR2jCYdwJ7yQ%2BKjlPIOmg%3DoeTz7MkA2F3fVOsTL9oEVhcLT2awxP03dwedxohbKCA";
 
 
 		
-		$API_query = /*"?&q=".$name.*/$API_parameters;
+		$API_query = "?&q=".$name.$API_parameters;
 		$ch = curl_init();
 		$headers = array( 
 		    "Authorization: Bearer $bearertok"
@@ -416,8 +416,6 @@
 		  $http_code = $info['http_code'];//print_r($http_code); FOR DEBUG TO HTTP HEADERS
 		  curl_close($ch);//CLOSING CURL
 		  $json = json_decode($data, true);//decoding json from twitter 
-
-		  var_dump($json);
 		  $i=0;
 		  foreach ($json["statuses"] as $tweet) {
 
