@@ -58,7 +58,7 @@
 
 		        }else{
 
-		        $node = Array("node" => $koma,"url" => /*GetImage(*/$koma/*)*/,"Type" => "P"); //create row for party
+		        $node = Array("node" => $koma,"url" => GetImage($koma),"Type" => "P"); //create row for party
 		        array_push($nodes,$node);
 
 		        }
