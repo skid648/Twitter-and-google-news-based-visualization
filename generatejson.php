@@ -58,7 +58,7 @@
 
 		        }else{
 
-		        $node = Array("node" => $koma,"url" => GetImage($koma),"Type" => "P"); //create row for party
+		        $node = Array("node" => $koma,"url" => /*GetImage(*/$koma/*)*/,"Type" => "P"); //create row for party
 		        array_push($nodes,$node);
 
 		        }
@@ -122,16 +122,27 @@
 							$JSONlink = Array("source" => 0,"target" => $innerKey);
 							array_push($json["links"], $JSONlink);	
 
-						}else if($innerValue["Type"] == "D"){
+						}else if($innerValue["Type"] == "D" && $innerValue["name"] == $deputy){
 
-							$positionOfDeputy = $innerKey; //Kratame ti thesh tou vouleuth gia th dhmiourgia tou link
+							$positionOfDeputy = $innerKey;
 							$DeputyParty = $source_party;
+							echo "KRATAME TO KEY TOU ".$innerValue["name"]." tou opoiou to komma einai to ".$DeputyParty." kai einai to ".$positionOfDeputy."<br>"; //Kratame ti thesh tou vouleuth gia th dhmiourgia tou link
+							
 
 							foreach ($json["nodes"] as $key2 => $value2) {
+
 								if($value2["Type"] == "P" && $value2["name"] == $DeputyParty){
 
-									echo "Vrhka to komma tou vouleuth".$deputy." einai to :".$value2["name"]." kai einai sth thesi:".$key2."<br>";
+									echo "Vrhka to komma tou vouleuth".$innerValue["name"]." einai to :".$value2["name"]." kai einai sth thesi:".$key2."<br>";
 									$JSONlink = Array("source" => $key2,"target" => $innerKey);
+									echo "<br>Uparxei to:";
+									    print_r($JSONlink);
+									    echo "<br>Sto:</br>";
+									    print_r($json["links"]);
+									    echo "?<br>";
+									if (in_array($JSONlink, $json["links"])) {
+										echo "NAI<br>";
+									}
 									array_push($json["links"], $JSONlink);	
 
 								}
