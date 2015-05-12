@@ -90,7 +90,7 @@
 		
 		foreach ($nodes as $key => $value) {
 
-			$JSONnodes = Array("name" => $value["node"],"size" => 500,"icon"=>$value["url"], "id"=>$key, "Type"=> $value["Type"]);
+			$JSONnodes = Array("name" => $value["node"],"size" => 500,"icon"=>$value["url"], "Type"=> $value["Type"]);
 			array_push($json["nodes"], $JSONnodes);
 			
 
