@@ -89,7 +89,7 @@
 
 		
 		//print_r($nodes);
-		$JSONnodes = Array("name" => "main","size" => 500,"icon"=>"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg", "id"=>"0");
+		$JSONnodes = Array("name" => "main","size" => 500,"icon"=>"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg", "id"=>"0","Type"=> "M");
 		
 		$json = Array("nodes"=>Array(),"links" => Array());
 		array_push($json["nodes"], $JSONnodes);
@@ -120,24 +120,35 @@
 									
 			
 			foreach ($json["nodes"] as $innerKey => $innerValue) {
-						echo "<br> key: <b><br>";
-						print_r($innerKey);
-						echo "<br></b> value: <b><br>";
-						print_r($innerValue);
-						echo "<br></b></br>";
+						//echo "<br> key: <b><br>";
+						//print_r($innerKey);
+						//echo "<br></b> value: <b><br>";
+						//print_r($innerValue);
+						//echo "<br></b></br>";
 						if($innerValue["Type"] == "P"){
 
 							$JSONlink = Array("source" => 0,"target" => $innerKey);
-							array_push($json["links"], $JSONlink);
+							array_push($json["links"], $JSONlink);	
 
-							if($innerValue == $source_party){
+						}else if($innerValue["Type"] == "D"){
 
-								$indexOfDeputy = array_search($deputy, $json["nodes"]);
+							$positionOfDeputy = $innerKey; //Kratame ti thesh tou vouleuth gia th dhmiourgia tou link
+							$DeputyParty = $source_party;
 
-								$JSONlink = Array("source" => $indexOfDeputy,"target" => $innerKey);
-								array_push($json["links"], $JSONlink);
+							foreach ($json["nodes"] as $key2 => $value2) {
+								if($value2["Type"] == "P" && $value2["name"] == $DeputyParty){
 
+									echo "Vrhka to komma tou vouleuth einai to :".$value2["name"]." kai einai sth thesi:".$key2."<br>";
+									$JSONlink = Array("source" => $key2,"target" => $innerKey);
+									array_push($json["links"], $JSONlink);	
+
+								}
 							}
+
+
+
+							
+
 						}
 
 			}
