@@ -80,7 +80,7 @@ d3.json("../../../data/data.json", function(error, graph) {
   var imgs = node.append("image")
       .attr("xlink:href", function(d){return d.icon;})
       .attr("x",-75)
-      .attr("y",-73)
+      .attr("y",-75)
       .attr("width", 150)
       .attr("height", 150)
       .attr("clip-path",function(d) { return "url(#circle" + d.index + ")"});
@@ -107,7 +107,7 @@ d3.json("../../../data/data.json", function(error, graph) {
       .append("circle")
       .attr("r",40);*/
 
-      
+
       
 
   force.on("tick", function() {
@@ -122,7 +122,7 @@ d3.json("../../../data/data.json", function(error, graph) {
         .attr("cy", function(d) { return d.y = Math.max(r, Math.min(height - r, d.y)); });
 
     imgs.attr("x", function(d) { return d.x -75; })
-        .attr("y", function(d) { return d.y -73; });
+        .attr("y", function(d) { return d.y -75; });
 
     circles.attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
