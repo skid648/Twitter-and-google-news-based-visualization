@@ -22,7 +22,7 @@
 
 var width = window.innerWidth;
 var height = window.innerHeight;
-var r = 6;
+var r = 40;
 
 var color = d3.scale.category20();
 
@@ -106,13 +106,15 @@ d3.json("../../../data/data.json", function(error, graph) {
       .attr("id","circle")
       .append("circle")
       .attr("r",40);*/
+
+
       
 
   force.on("tick", function() {
-    link.attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
+    link.attr("x1", function(d) { return d.x = Math.max(r, Math.min(width - r, d.source.x)); })
+        .attr("y1", function(d) { return d.y = Math.max(r, Math.min(height - r, d.source.y)); })
+        .attr("x2", function(d) { return d.x = Math.max(r, Math.min(width - r, d.target.x)); })
+        .attr("y2", function(d) { return d.y = Math.max(r, Math.min(height - r, d.target.y)); });
 
     /*node.attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });*/
