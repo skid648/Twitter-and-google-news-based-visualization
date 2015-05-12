@@ -17,6 +17,7 @@
 
 </style>
 <body>
+  <button onclick="UpdateGraph(width,height,r,color,force,svg,jsonfile)">VISUALIZE ME</button>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
@@ -35,7 +36,15 @@ var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-d3.json("../../../data/data.json", function(error, graph) {
+var jsonfile = "../../../data/data.json";
+
+//UpdateGraph(width,height,r,color,force,svg,jsonfile);
+
+function UpdateGraph(width,height,r,color,force,svg,json){
+
+svg.selectAll("*").remove();
+  
+d3.json(json, function(error, graph) {
   force
       .nodes(graph.nodes)
       .links(graph.links)
@@ -132,5 +141,6 @@ d3.json("../../../data/data.json", function(error, graph) {
 
   });
 });
+}
 
 </script>
