@@ -79,10 +79,9 @@
 
 		//echo "<br>========NODES===========<br>";
 
-		$size = 200;
-		$increment = 200;
+		
 		//print_r($nodes);
-		$JSONnodes = Array("name" => "main","size" => $size+3*$increment,"icon"=>"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg", "Type"=> "M");
+		$JSONnodes = Array("name" => "main","size" => "big","icon"=>"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg", "Type"=> "M");
 		
 		$json = Array("nodes"=>Array(),"links" => Array());
 		array_push($json["nodes"], $JSONnodes);
@@ -93,17 +92,17 @@
 
 			if($value["Type"] == "P"){
 
-				$JSONnodes = Array("name" => $value["node"],"size" => $size+2*$increment,"icon"=>$value["url"], "Type"=> $value["Type"]);
+				$JSONnodes = Array("name" => $value["node"],"size" => "normal","icon"=>$value["url"], "Type"=> $value["Type"]);
 				array_push($json["nodes"], $JSONnodes);
 
 			}else if($value["Type"] == "D"){
 
-				$JSONnodes = Array("name" => $value["node"],"size" => $size+$increment,"icon"=>$value["url"], "Type"=> $value["Type"]);
+				$JSONnodes = Array("name" => $value["node"],"size" => "small","icon"=>$value["url"], "Type"=> $value["Type"]);
 				array_push($json["nodes"], $JSONnodes);
 
 			}else if($value["Type"] == "T"){
 
-				$JSONnodes = Array("name" => $value["node"],"size" => $size,"icon"=>$value["url"], "Type"=> $value["Type"]);
+				$JSONnodes = Array("name" => $value["node"],"size" => $size,"tiny"=>$value["url"], "Type"=> $value["Type"]);
 				array_push($json["nodes"], $JSONnodes);
 
 
