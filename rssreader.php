@@ -111,28 +111,12 @@
 		function IsVouleuths($findme,$vouleutes,$conn){
 
 			foreach ($vouleutes as $key) {
-
-				/****************************************************\
-
-						DEBUG
-
-				
-				\****************************************************/
-				echo "<div style='width:100%; background-color:#BFF9FF; border-bottom:1px dashed black;'>";
-				echo "<p>Is there: <b>".$key."</b> in <b>".$findme."?</b></p>";
-				
-
-
-				$isthere = strpos($findme, rtrim($key,"Σ"));
+			
+				$isthere = strpos($findme, $key);
 				if ($isthere === false) {
 
-				/*	   UNCOMMENT TO DEBUG   *************/
-				echo "<p>No</p></div>";
-				
 				} else {
-
-					/*  UNCOMMENT TO DEBUG   *************/
-				    echo "<p>Yes</p></div>"; 
+				    
 				    //$link = GetImage($key);
 				    //echo "<div style='overflow:hidden; text-align:center; width:220px; height:220px; float:left; border-radius:250px;'><img style='width:auto; height:200px;' src=".$link."></img>".$key."</div>";
 				    $sql = "INSERT INTO Hot (Name,image_url ) VALUES ('".$key."','".GetImage($key,$conn)."')";
@@ -180,10 +164,9 @@
 			$google_search_api = $google_search_api."&cx=".$id;
 			$google_search_api = $google_search_api."&q=".$name;
 			$google_search_api = $google_search_api.'&searchType=image';
-			// DEBUG echo "</br>".$google_search_api."</br>";
 			$body = file_get_contents($google_search_api);
 			$json = json_decode($body);
-			$link = $json->items[1]->link;
+			$link = $json->items[0]->link;
 			return $link;
 		}
 		$conn->close();
