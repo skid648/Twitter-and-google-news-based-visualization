@@ -78,9 +78,18 @@
 		}
 
 
-		getFeed($url,$vouleutes,$conn);													//Get the feed!
-		GenerateJson($servername,$username,$password,$dbname);
-		$conn->close(); 																// close sql connection
+		$time = time();
+		$timeFormated = date("Y-m-d-H",$time);
+		
+
+		getFeed($url,$vouleutes,$conn);											//Get the feed!
+
+
+		GenerateJson($servername,$username,$password,$dbname,$timeFormated);
+
+		GenerateTweetJson("Αλέξης Τσίπρας");
+
+		$conn->close(); 														// close sql connection
 
 		/***************************************\
 
@@ -186,10 +195,10 @@
 			$google_search_api = $google_search_api."&q=".$name;
 			$google_search_api = $google_search_api.'&searchType=image';
 			// DEBUG echo "</br>".$google_search_api."</br>";
-			$body = file_get_contents($google_search_api);
-			$json = json_decode($body);
-			$link = $json->items[1]->link;
-			return $link;
+			//$body = file_get_contents($google_search_api);
+			//$json = json_decode($body);
+			//$link = $json->items[1]->link;
+			return $link = "/PoliticalTweets/backend/assets/sampleimage.jpg";
 		}
 
 		function GetPartyImage($name){
@@ -202,14 +211,14 @@
 			$google_search_api = $google_search_api."&q=".$name;
 			$google_search_api = $google_search_api.'&searchType=image';
 			$google_search_api = preg_replace('/\s+/', '', $google_search_api);
-			$body = file_get_contents($google_search_api);
-			$json = json_decode($body);
-			$link = $json->items[0]->link;
-			return $link;
+			//$body = file_get_contents($google_search_api);
+			//$json = json_decode($body);
+			//$link = $json->items[0]->link;
+			return $link = "/PoliticalTweets/backend/assets/sampleparty.jpg";
 		}
 
 
-		function GenerateJson($servername,$username,$password,$dbname){
+		function GenerateJson($servername,$username,$password,$dbname,$timestamp){
 
 			$deputies = array();
 			$parties = array();
@@ -360,11 +369,80 @@
 
 			$json = json_encode($json);
 
-			//print_r($json);
-			$myfile = fopen("data/data.json", "w") or die("Unable to open file!");
+			$dir = "data/".$timestamp;
+
+			
+			    mkdir($dir);
+			
+
+			$myfile = fopen($dir."/basic-graph-data.json", "w") or die("Unable to open file!");
 			fwrite($myfile, $json);
 			fclose($myfile);
 		}
+
+		function GenerateTweetJson($name){
+
+		$name = greeklish($name);
+		$api_URL = 'https://stream.twitter.com/1.1/statuses/filter.json';//'https://api.twitter.com/1.1/search/tweets.json';
+		$API_parameters = '?track='.$name;//'&include_entities=true&result_type=recent&lang=el&count=70';
+
+		$bearertok = "AAAAAAAAAAAAAAAAAAAAAC4CUAAAAAAAe4fo6tVR2jCYdwJ7yQ%2BKjlPIOmg%3DoeTz7MkA2F3fVOsTL9oEVhcLT2awxP03dwedxohbKCA";
+
+
+		
+		$API_query = /*"?&q=".$name.*/$API_parameters;
+		$ch = curl_init();
+		$headers = array( 
+		    "Authorization: Bearer $bearertok"
+		  ); 
+		  
+		  curl_setopt($ch, CURLOPT_URL, "$api_URL"."$API_query");
+		  curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+		  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		  curl_setopt($ch, CURLOPT_USERAGENT, " birdvisualization.comze.com Application / mailto:p11gkli@ionio.com ");
+		  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+		  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		  $data = curl_exec($ch);
+		  if(curl_exec($ch) === false)
+						{
+							echo 'Curl error: ' . curl_error($ch);//ERROR CHECKING
+						}
+						else
+						{
+							echo 'Operation completed without any errors';
+						}
+				
+		  $info = curl_getinfo($ch); 
+		  $http_code = $info['http_code'];//print_r($http_code); FOR DEBUG TO HTTP HEADERS
+		  curl_close($ch);//CLOSING CURL
+		  $json = json_decode($data, true);//decoding json from twitter 
+
+		  var_dump($json);
+		  $i=0;
+		  foreach ($json["statuses"] as $tweet) {
+
+		  	$text_tweet = $tweet["text"];
+	 		$user_id = $tweet["user"]["name"];
+			$datetime = $tweet["created_at"];
+	        $twitter_account_name = $tweet["user"]["screen_name"];
+		  	echo "<br> o <b>".$twitter_account_name."</b> eipe :<br> ";
+		  	echo $text_tweet;
+		  	echo "<br>stis: ".$datetime."<br>";
+		  	$i++;
+		  }
+
+		  echo $i;
+
+		}
+
+		function greeklish($Name) 
+		{  
+		$greek   = array('α','ά','Ά','Α','β','Β','γ', 'Γ', 'δ','Δ','ε','έ','Ε','Έ','ζ','Ζ','η','ή','Η','θ','Θ','ι','ί','ϊ','ΐ','Ι','Ί', 'κ','Κ','λ','Λ','μ','Μ','ν','Ν','ξ','Ξ','ο','ό','Ο','Ό','π','Π','ρ','Ρ','σ','ς', 'Σ','τ','Τ','υ','ύ','Υ','Ύ','φ','Φ','χ','Χ','ψ','Ψ','ω','ώ','Ω','Ώ',' ',"'","'",','); 
+		$english = array('a', 'a','A','A','b','B','g','G','d','D','e','e','E','E','z','Z','i','i','I','th','Th', 'i','i','i','i','I','I','k','K','l','L','m','M','n','N','x','X','o','o','O','O','p','P' ,'r','R','s','s','S','t','T','u','u','Y','Y','f','F','ch','Ch','ps','Ps','o','o','O','O','%20','%20','%20','%20'); 
+		$string  = str_replace($greek, $english, $Name); 
+		return $string; 
+		} 
+
 		
 
 		?>

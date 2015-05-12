@@ -39,7 +39,12 @@ var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-var jsonfile = "../backend/data/data.json";
+var currentdate = new Date(); 
+var datetime = (currentdate.getFullYear()) + "-"+ ("0" +(currentdate.getMonth()+1)).slice(-2) + "-" + ("0" + currentdate.getDate()).slice(-2) + "-"+ currentdate.getHours();
+
+
+
+var jsonfile = "../backend/data/"+datetime+"/basic-graph-data.json";
 
 //UpdateGraph(width,height,r,color,force,svg,jsonfile);
 
