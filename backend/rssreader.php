@@ -87,7 +87,7 @@
 
 		GenerateJson($servername,$username,$password,$dbname,$timeFormated);
 
-		GenerateTweetJson("Αλέξης Τσίπρας");
+		
 
 		$conn->close(); 														// close sql connection
 
@@ -336,6 +336,7 @@
 
 							}else if($innerValue["Type"] == "D" && $innerValue["name"] == $deputy){
 
+
 								$positionOfDeputy = $innerKey;
 								$DeputyParty = $source_party;
 								echo "KRATAME TO KEY TOU ".$innerValue["name"]." tou opoiou to komma einai to ".$DeputyParty." kai einai to ".$positionOfDeputy."<br>"; //Kratame ti thesh tou vouleuth gia th dhmiourgia tou link
@@ -367,7 +368,9 @@
 			}
 
 
-			$json = json_encode($json);
+
+
+			$json_encoded = json_encode($json);
 
 			$dir = "data/".$timestamp;
 
@@ -376,69 +379,112 @@
 			
 
 			$myfile = fopen($dir."/basic-graph-data.json", "w") or die("Unable to open file!");
-			fwrite($myfile, $json);
+			foreach ($json["nodes"] as $key => $value) {
+
+				if($value["Type"] == "D"){
+
+					GenerateTweetArray($value["name"],$value["icon"],$dir);
+
+				}
+				
+			}
+			fwrite($myfile, $json_encoded);
 			fclose($myfile);
 		}
 
-		function GenerateTweetJson($name){
+		function GenerateTweetArray($originalName,$image_url,$dir){
 
-		$name = greeklish($name);
-		$api_URL = 'https://api.twitter.com/1.1/search/tweets.json';
-		$API_parameters = '&include_entities=true&result_type=recent&lang=el&count=70';
+			$name = greeklish($originalName);
+			$api_URL = 'https://api.twitter.com/1.1/search/tweets.json';
+			$API_parameters = '&include_entities=true&result_type=recent&lang=el&count=70';
 
-		$bearertok = "AAAAAAAAAAAAAAAAAAAAAC4CUAAAAAAAe4fo6tVR2jCYdwJ7yQ%2BKjlPIOmg%3DoeTz7MkA2F3fVOsTL9oEVhcLT2awxP03dwedxohbKCA";
+			$bearertok = "AAAAAAAAAAAAAAAAAAAAAC4CUAAAAAAAe4fo6tVR2jCYdwJ7yQ%2BKjlPIOmg%3DoeTz7MkA2F3fVOsTL9oEVhcLT2awxP03dwedxohbKCA";
 
 
-		
-		$API_query = "?&q=".$name.$API_parameters;
-		$ch = curl_init();
-		$headers = array( 
-		    "Authorization: Bearer $bearertok"
-		  ); 
-		  
-		  curl_setopt($ch, CURLOPT_URL, "$api_URL"."$API_query");
-		  curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-		  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		  curl_setopt($ch, CURLOPT_USERAGENT, " birdvisualization.comze.com Application / mailto:p11gkli@ionio.com ");
-		  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-		  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-		  $data = curl_exec($ch);
-		  if(curl_exec($ch) === false)
-						{
-							echo 'Curl error: ' . curl_error($ch);//ERROR CHECKING
-						}
-						else
-						{
-							echo 'Operation completed without any errors';
-						}
+			
+			$API_query = "?&q=".$name.$API_parameters;
+			$ch = curl_init();
+			$headers = array( 
+			    "Authorization: Bearer $bearertok"
+			  ); 
+			  
+			  curl_setopt($ch, CURLOPT_URL, "$api_URL"."$API_query");
+			  curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			  curl_setopt($ch, CURLOPT_USERAGENT, " birdvisualization.comze.com Application / mailto:p11gkli@ionio.com ");
+			  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+			  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+			  $data = curl_exec($ch);
+			  if(curl_exec($ch) === false)
+							{
+								echo 'Curl error: ' . curl_error($ch);//ERROR CHECKING
+							}
+							else
+							{
+								echo 'Operation completed without any errors';
+							}
+					
+			  $info = curl_getinfo($ch); 
+			  $http_code = $info['http_code'];//print_r($http_code); FOR DEBUG TO HTTP HEADERS
+			  curl_close($ch);//CLOSING CURL
+			  $json = json_decode($data, true);//decoding json from twitter 
+			  $tweets_array= array();
+			  foreach ($json["statuses"] as $tweet) {
+
+			  	$text_tweet = $tweet["text"];
+		 		$user_id = $tweet["user"]["name"];
+				$datetime = $tweet["created_at"];
+				$profile_image = $tweet["user"]['profile_image_url'];
+		        $stripped_tweet = preg_replace('/(#|@)\S+|(RT:)|(RT)/', '', $text_tweet); // remove hashtags
+		        $stripped_tweet = preg_replace('#\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))#', '', $stripped_tweet);
+				$stripped_tweet = trim(preg_replace('/\s+/', ' ', $stripped_tweet ));
+
+				$found = false;
+				foreach ($tweets_array as $value) {
+				        	
+				        	if($stripped_tweet === $value["Tweet"]){
+				        		
+				        		$found = true;
+				        	}
+				        }
+
+				        if($found){
+
+				        }else{
+
+				        array_push($tweets_array,Array("Tweet"=>$stripped_tweet,"UserName"=>$user_id,"Date"=>$datetime,"ProfileImage"=>$profile_image,"BelongsTo"=>$originalName));
+
+				        }
+
 				
-		  $info = curl_getinfo($ch); 
-		  $http_code = $info['http_code'];//print_r($http_code); FOR DEBUG TO HTTP HEADERS
-		  curl_close($ch);//CLOSING CURL
-		  $json = json_decode($data, true);//decoding json from twitter 
-		  $i=0;
-		  foreach ($json["statuses"] as $tweet) {
+				
+			  }
 
-		  	$text_tweet = $tweet["text"];
-	 		$user_id = $tweet["user"]["name"];
-			$datetime = $tweet["created_at"];
-	        $twitter_account_name = $tweet["user"]["screen_name"];
-		  	echo "<br> o <b>".$twitter_account_name."</b> eipe :<br> ";
-		  	echo $text_tweet;
-		  	echo "<br>stis: ".$datetime."<br>";
-		  	$i++;
-		  }
+				//return $tweets_array;
+			  	$JSONnodes = Array("Tweet"=>"Deputy","UserName"=>$originalName,"Date"=>"null","ProfileImage"=>$image_url,"BelongsTo"=>"null");
+			  	$json = Array("nodes"=>Array(),"links" => Array());
+			  	array_push($json["nodes"], $JSONnodes);
+			  	foreach ($tweets_array as $key => $value) {
+			  		array_push($json["nodes"], $value);
+			  		$JSONlink = Array("source" => $key+1,"target" => 0);
+			  		array_push($json["links"], $JSONlink);	
+			  	}
 
-		  echo $i;
+			  	$json = json_encode($json);
+			  	//print_r($json);
+			  	$myfile = fopen($dir."/".$originalName."-data.json", "w") or die("Unable to open file!");
+			  	fwrite($myfile, $json);
+				fclose($myfile);
 
 		}
 
-		function greeklish($Name) 
-		{  
-		$greek   = array('α','ά','Ά','Α','β','Β','γ', 'Γ', 'δ','Δ','ε','έ','Ε','Έ','ζ','Ζ','η','ή','Η','θ','Θ','ι','ί','ϊ','ΐ','Ι','Ί', 'κ','Κ','λ','Λ','μ','Μ','ν','Ν','ξ','Ξ','ο','ό','Ο','Ό','π','Π','ρ','Ρ','σ','ς', 'Σ','τ','Τ','υ','ύ','Υ','Ύ','φ','Φ','χ','Χ','ψ','Ψ','ω','ώ','Ω','Ώ',' ',"'","'",','); 
-		$english = array('a', 'a','A','A','b','B','g','G','d','D','e','e','E','E','z','Z','i','i','I','th','Th', 'i','i','i','i','I','I','k','K','l','L','m','M','n','N','x','X','o','o','O','O','p','P' ,'r','R','s','s','S','t','T','u','u','Y','Y','f','F','ch','Ch','ps','Ps','o','o','O','O','%20','%20','%20','%20'); 
-		$string  = str_replace($greek, $english, $Name); 
-		return $string; 
+		function greeklish($Name) {  
+
+			$greek   = array('α','ά','Ά','Α','β','Β','γ', 'Γ', 'δ','Δ','ε','έ','Ε','Έ','ζ','Ζ','η','ή','Η','θ','Θ','ι','ί','ϊ','ΐ','Ι','Ί', 'κ','Κ','λ','Λ','μ','Μ','ν','Ν','ξ','Ξ','ο','ό','Ο','Ό','π','Π','ρ','Ρ','σ','ς', 'Σ','τ','Τ','υ','ύ','Υ','Ύ','φ','Φ','χ','Χ','ψ','Ψ','ω','ώ','Ω','Ώ',' ',"'","'",','); 
+			$english = array('a', 'a','A','A','b','B','g','G','d','D','e','e','E','E','z','Z','i','i','I','th','Th', 'i','i','i','i','I','I','k','K','l','L','m','M','n','N','x','X','o','o','O','O','p','P' ,'r','R','s','s','S','t','T','u','u','Y','Y','f','F','ch','Ch','ps','Ps','o','o','O','O','%20','%20','%20','%20'); 
+			$string  = str_replace($greek, $english, $Name); 
+			return $string; 
+
 		} 
 
 		
