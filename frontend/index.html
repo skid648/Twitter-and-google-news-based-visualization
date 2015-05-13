@@ -72,7 +72,12 @@ d3.json(json, function(error, graph) {
       .call(force.drag);
 
   node.append("title")
-      .text(function(d) { if(d.name){return d.name;}else if(d.Tweet){return d.Tweet;} });
+      .text(function(d) { if(d.name){return d.name;}else if(d.Tweet)
+							if (d.Tweet == "Deputy"){
+								return d.UserName;}
+							else{
+								return d.Tweet;
+							}	  });
 
   var label = node.append("text")
       .text(function(d){return d.name})
