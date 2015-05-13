@@ -76,7 +76,8 @@ d3.json(json, function(error, graph) {
 
   var label = node.append("text")
       .text(function(d){return d.name})
-      .attr("font-size",10);
+      .attr("font-size",10)
+      .attr("text-anchor", "middle");
  
 
   var clip = node.append("clipPath")
@@ -151,7 +152,7 @@ d3.json(json, function(error, graph) {
     clip.attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
 
-    label.attr("x", function(d) {if(d.name){console.log("to "+d.name+" einai:"+(d.name.length*10)/2);return d.x-((d.name.length*10)/2)+15;  }})
+    label.attr("x", function(d) {if(d.name){ return d.x;  }})
         .attr("y", function(d) { return d.y+r+r/3; });
 
   });
