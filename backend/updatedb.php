@@ -10,7 +10,7 @@ require("credentials.php");
 //$conn = new mysqli($servername, $username, $password, $dbname);
 
 
-echo "<br>alright<br>";
+echo $_POST["url"];
 
 ?>
 </body>
