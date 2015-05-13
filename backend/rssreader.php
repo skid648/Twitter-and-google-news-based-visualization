@@ -382,8 +382,10 @@
 			foreach ($json["nodes"] as $key => $value) {
 
 				if($value["Type"] == "D"){
-
-					GenerateTweetArray($value["name"],$value["icon"],$dir);
+					//echo "<font style='font-size:50px;'>O ".$value["name"]."</font><br>";
+					$name = explode(" ",$value["name"]);
+					
+					GenerateTweetArray($name[1],$name[0],$value["icon"],$dir);
 
 				}
 				
@@ -392,11 +394,11 @@
 			fclose($myfile);
 		}
 
-		function GenerateTweetArray($originalName,$image_url,$dir){
+		function GenerateTweetArray($originalName,$LastName,$image_url,$dir){
 
 			$name = greeklish($originalName);
 			$api_URL = 'https://api.twitter.com/1.1/search/tweets.json';
-			$API_parameters = '&include_entities=true&result_type=recent&lang=el&count=70';
+			$API_parameters = '&lang=el&count=20';
 
 			$bearertok = "AAAAAAAAAAAAAAAAAAAAAC4CUAAAAAAAe4fo6tVR2jCYdwJ7yQ%2BKjlPIOmg%3DoeTz7MkA2F3fVOsTL9oEVhcLT2awxP03dwedxohbKCA";
 
@@ -425,13 +427,16 @@
 							}
 					
 			  $info = curl_getinfo($ch); 
-			  $http_code = $info['http_code'];//print_r($http_code); FOR DEBUG TO HTTP HEADERS
+			  $http_code = $info['http_code'];
+			  print_r($info);//print_r($http_code); FOR DEBUG TO HTTP HEADERS
 			  curl_close($ch);//CLOSING CURL
 			  $json = json_decode($data, true);//decoding json from twitter 
+			  print_r($json);
 			  $tweets_array= array();
 			  foreach ($json["statuses"] as $tweet) {
 
 			  	$text_tweet = $tweet["text"];
+			  	
 		 		$user_id = $tweet["user"]["name"];
 				$datetime = $tweet["created_at"];
 				$profile_image = $tweet["user"]['profile_image_url'];
@@ -440,6 +445,7 @@
 				$stripped_tweet = trim(preg_replace('/\s+/', ' ', $stripped_tweet ));
 
 				$found = false;
+
 				foreach ($tweets_array as $value) {
 				        	
 				        	if($stripped_tweet === $value["Tweet"]){
@@ -452,7 +458,7 @@
 
 				        }else{
 
-				        array_push($tweets_array,Array("Tweet"=>$stripped_tweet,"UserName"=>$user_id,"Date"=>$datetime,"ProfileImage"=>$profile_image,"BelongsTo"=>$originalName));
+				        array_push($tweets_array,Array("Tweet"=>$stripped_tweet,"UserName"=>$user_id,"Date"=>$datetime,"icon"=>$profile_image,"BelongsTo"=>$originalName,"size"=>"small"));
 
 				        }
 
@@ -460,19 +466,24 @@
 				
 			  }
 
-				//return $tweets_array;
-			  	$JSONnodes = Array("Tweet"=>"Deputy","UserName"=>$originalName,"Date"=>"null","ProfileImage"=>$image_url,"BelongsTo"=>"null");
+				print_r($tweets_array);
+				
+			  	$JSONnodes = Array("Tweet"=>"Deputy","UserName"=>$originalName,"Date"=>"null","icon"=>$image_url,"BelongsTo"=>"null","size"=>"big");
 			  	$json = Array("nodes"=>Array(),"links" => Array());
 			  	array_push($json["nodes"], $JSONnodes);
+
 			  	foreach ($tweets_array as $key => $value) {
-			  		array_push($json["nodes"], $value);
+			  		array_push($json["nodes"], $value);	
+			  	}
+			  	foreach ($tweets_array as $key => $value) {
 			  		$JSONlink = Array("source" => $key+1,"target" => 0);
-			  		array_push($json["links"], $JSONlink);	
+			  		array_push($json["links"], $JSONlink);
 			  	}
 
+			  	print_r($json);
 			  	$json = json_encode($json);
 			  	//print_r($json);
-			  	$myfile = fopen($dir."/".$originalName."-data.json", "w") or die("Unable to open file!");
+			  	$myfile = fopen($dir."/".$LastName." ".$originalName."-data.json", "w") or die("Unable to open file!");
 			  	fwrite($myfile, $json);
 				fclose($myfile);
 

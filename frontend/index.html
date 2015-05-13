@@ -40,7 +40,7 @@ var svg = d3.select("body").append("svg")
     .attr("height", height);
 
 var currentdate = new Date(); 
-var datetime = (currentdate.getFullYear()) + "-"+ ("0" +(currentdate.getMonth()+1)).slice(-2) + "-" + ("0" + currentdate.getDate()).slice(-2) + "-"+ currentdate.getHours();
+var datetime = (currentdate.getFullYear()) + "-"+ ("0" +(currentdate.getMonth()+1)).slice(-2) + "-" + ("0" + currentdate.getDate()).slice(-2) + "-"+ ("0" +currentdate.getHours()).slice(-2);
 
 
 
@@ -67,11 +67,12 @@ d3.json(json, function(error, graph) {
   var node = svg.selectAll(".node")
       .data(graph.nodes)
     .enter().append("g")
-      .on('dblclick', function(d){ console.log(d); UpdateGraph(width,height,r,color,force,svg,jsonfile); })
+      .on('dblclick', function(d){ UpdateGraph(width,height,r,color,force,svg,"../backend/data/"+datetime+"/"+d.name+"-data.json"); })
+      .on('click', function(d){ console.log(d);})
       .call(force.drag);
 
   node.append("title")
-      .text(function(d) { return d.name; });
+      .text(function(d) { if(d.name){return d.name;}else if(d.Tweet){return d.Tweet;} });
 
 
  
@@ -115,6 +116,7 @@ d3.json(json, function(error, graph) {
                                     }else if(d.size == "tiny"){
                                       return size;
                                     }
+                                    
                                   });
 
 
