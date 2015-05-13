@@ -150,7 +150,7 @@
 
 					/*  UNCOMMENT TO DEBUG   *************/
 				    echo "<p>Yes</p></div>"; 
-				    $sql = "INSERT INTO Hot (Name,image_url ) VALUES ('".$key."','".GetImage($key,$conn)."')";
+				    $sql = "INSERT INTO Hot (Name,image_url ) VALUES ('".$key."','sample')";
 
 					if ($conn->query($sql) === TRUE) {
 					} else {
@@ -172,34 +172,7 @@
 		        return str_replace($search, $replace, $string); 
 		} 
 
-		function GetImage($name,$conn){
-
-			$sql = "SELECT FirstName, LastName FROM vouleutes WHERE LastName = '".$name."'";
-			$result = $conn->query($sql);
-
-			if ($result->num_rows > 0) {
-			    // output data of each row
-			    while($row = $result->fetch_assoc()) {
-			        //echo "Onoma: " . $row["FirstName"]. " - Epitheto: " . $row["LastName"]. "<br>";
-			        $name =  $row["FirstName"]."%20".$row["LastName"];
-			    }
-			} else {
-			    echo "0 results";
-			}
-
-			$google_search_api = "https://www.googleapis.com/customsearch/v1";
-			$key = "AIzaSyDrIcRT3ETSei8Rhh09StVO2dUwrudWPn0";
-			$id="010381646192131644412:zp1d2xj-tmk";
-			$google_search_api = $google_search_api."?key=".$key;
-			$google_search_api = $google_search_api."&cx=".$id;
-			$google_search_api = $google_search_api."&q=".$name;
-			$google_search_api = $google_search_api.'&searchType=image';
-			// DEBUG echo "</br>".$google_search_api."</br>";
-			//$body = file_get_contents($google_search_api);
-			//$json = json_decode($body);
-			//$link = $json->items[1]->link;
-			return $link = "/PoliticalTweets/backend/assets/sampleimage.jpg";
-		}
+		
 
 		function GetPartyImage($name){
 
@@ -231,7 +204,7 @@
 			    die("Connection failed: " . $conn->connect_error);
 			} 
 
-			$sql = "SELECT vouleutes.FirstName as Name , vouleutes.LastName as Last, vouleutes.Komma as Koma, Hot.image_url as url
+			$sql = "SELECT vouleutes.FirstName as Name , vouleutes.LastName as Last, vouleutes.Komma as Koma, vouleutes.image as url
 					FROM Hot,vouleutes
 					Where vouleutes.LastName = Hot.Name";
 
