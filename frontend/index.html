@@ -72,8 +72,8 @@ d3.json(json, function(error, graph) {
       .call(force.drag);
 
   node.append("title")
-      .text(function(d) { if(d.name){return d.name;}else if(d.Tweet){return d.Tweet;} });
-
+      .text(function(d) { if(d.name){return d.name;}else if(d.Tweet){return d.Tweet;} })
+      .append("text",function(d){return d.name});
 
  
 
@@ -97,10 +97,10 @@ d3.json(json, function(error, graph) {
 
   var imgs = node.append("image")
       .attr("xlink:href", function(d){return d.icon;})
-      .attr("x",-75)
-      .attr("y",-75)
-      .attr("width", 150)
-      .attr("height", 150)
+      .attr("x",-50)
+      .attr("y",-50)
+      .attr("width", 100)
+      .attr("height", 100)
       .attr("clip-path",function(d) { return "url(#circle" + d.index + ")"});
 
    var circles = node.append("circle")
@@ -116,7 +116,7 @@ d3.json(json, function(error, graph) {
                                     }else if(d.size == "tiny"){
                                       return size;
                                     }
-                                    
+
                                   });
 
 
@@ -140,8 +140,8 @@ d3.json(json, function(error, graph) {
         node.attr("cx", function(d) { return d.x = Math.max(r, Math.min(width - r, d.x)); })
         .attr("cy", function(d) { return d.y = Math.max(r, Math.min(height - r, d.y)); });
 
-    imgs.attr("x", function(d) { return d.x -75; })
-        .attr("y", function(d) { return d.y -75; });
+    imgs.attr("x", function(d) { return d.x -50; })
+        .attr("y", function(d) { return d.y -50; });
 
     circles.attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
