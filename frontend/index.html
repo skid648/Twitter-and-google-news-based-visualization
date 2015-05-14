@@ -114,7 +114,7 @@
 
                                 d.x = Math.max(25, Math.min(width - 20, d.x));
                                 d.y = Math.max(40, Math.min(height - 25, d.y));
-
+                                console.log(Math.round(Scale(d.x,25,width)));
                                 return "translate(" + [d.x, d.y] + ")"
                             })
 
@@ -187,7 +187,7 @@
                     });
 
                 
-
+                      setTimeScroller(200,200);
 
                 function setTimeScroller(holderX, holderY) {
 
@@ -292,8 +292,28 @@
                     .call(xAxis);
 
                 var y = d3.scale.linear()
-                    .domain([30, 1])
+                    .domain([2, 1])
                     .range([5, height - 30]);
+
+
+                function Scale(x,start,end){
+
+                  var z = end/24;
+
+                  start = start/z;
+                  end = end/z;
+                  x = x/z;
+                  return x;
+                  
+
+                }
+
+               
+
+                console.log(Scale(300,20,1200));
+                    
+
+                 
 
                 var yAxis = d3.svg.axis()
                     .scale(y)
@@ -301,7 +321,7 @@
 
                 svg.append("g")
                     .attr("class", "y axis")
-                    .attr("transform", "translate(20,0)")
+                    .attr("transform", "translate(21,0)")
                     .call(yAxis);
 
                 var link = svg.selectAll(".link")
