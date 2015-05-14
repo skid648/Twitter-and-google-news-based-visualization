@@ -97,8 +97,18 @@ d3.json(json, function(error, graph) {
             d.x += d3.event.dx
             d.y += d3.event.dy
             console.log("dragged "+d.x+","+d.y);
+
             d3.select(this)
             .attr("transform", function(d,i){
+
+              d.x = Math.max(25, Math.min(width - 20, d.x));
+              d.y = Math.max(40, Math.min(height - 25, d.y));
+
+                return "translate(" + [ d.x,d.y ] + ")"
+            })
+
+            d3.select("#yDriver")// yDriver
+            .attr("x1", function(d,i){
 
               d.x = Math.max(25, Math.min(width - 20, d.x));
               d.y = Math.max(40, Math.min(height - 25, d.y));
@@ -135,6 +145,7 @@ d3.json(json, function(error, graph) {
                 .call(drag);
 
   var yDriver = svg.append("line")
+                .attr("id","yDriver");
                 .attr("class", "driver")
                 .attr("x1", 200)
                 .attr("y1", height-25)
