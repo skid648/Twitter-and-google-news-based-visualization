@@ -176,18 +176,37 @@
 
 		function GetPartyImage($name){
 
-			$google_search_api = "https://www.googleapis.com/customsearch/v1";
-			$key = "AIzaSyDrIcRT3ETSei8Rhh09StVO2dUwrudWPn0";
-			$id="010381646192131644412:zp1d2xj-tmk";
-			$google_search_api = $google_search_api."?key=".$key;
-			$google_search_api = $google_search_api."&cx=".$id;
-			$google_search_api = $google_search_api."&q=".$name;
-			$google_search_api = $google_search_api.'&searchType=image';
-			$google_search_api = preg_replace('/\s+/', '', $google_search_api);
-			//$body = file_get_contents($google_search_api);
-			//$json = json_decode($body);
-			//$link = $json->items[0]->link;
-			return $link = "/PoliticalTweets/backend/assets/sampleparty.jpg";
+			$name = trim(preg_replace('/\s+/', ' ', $name));
+			echo "<font style='font-size:30px;'>".$name."</font>";
+
+			$dir = "/PoliticalTweets/backend/assets/";
+
+			switch ($name) {
+				case "ΤΟ ΠΟΤΑΜΙ":
+					$dir = $dir."topotami.jpeg";
+					break;
+				case "Ν.Δ.":
+					$dir = $dir."nd.jpg";
+					break;
+				case "ΣΥΡΙΖΑ":
+					$dir = $dir."syriza.jpg";
+					break;
+				case "ΠΑ.ΣΟ.Κ.":
+					$dir = $dir."pasok.jpg";
+					break;
+				case "ΧΡΥΣΗ ΑΥΓΗ":
+					$dir = $dir."xa.jpg";
+					break;
+				case "ΑΝΕΞΑΡΤΗΤΟΙ ΕΛΛ�":
+					$dir = $dir."aneksarthtoi-ellhnes.jpg";
+					break;
+				case "Κ.Κ.Ε.":
+					$dir = $dir."kke.jpg";
+					break;
+			
+			}
+
+			return $dir;
 		}
 
 
@@ -253,7 +272,7 @@
 			    echo "0 results";
 			}
 
-			$JSONnodes = Array("name" => "main","size" => "big","icon"=>"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg", "Type"=> "M");
+			$JSONnodes = Array("name" => "main","size" => "big","icon"=>"../backend/assets/center.png", "Type"=> "M");
 			
 			$json = Array("nodes"=>Array(),"links" => Array());
 			array_push($json["nodes"], $JSONnodes);
@@ -431,7 +450,7 @@
 
 				        }else{
 
-				        array_push($tweets_array,Array("Tweet"=>$stripped_tweet,"UserName"=>$user_id,"Date"=>$datetime,"icon"=>$profile_image,"BelongsTo"=>$originalName,"size"=>"small"));
+				        array_push($tweets_array,Array("Tweet"=>$stripped_tweet,"UserName"=>$user_id,"Date"=>$datetime,"icon"=>$profile_image,"BelongsTo"=>$originalName,"size"=>"small","name"=>"basic-graph"));
 
 				        }
 
@@ -441,7 +460,7 @@
 
 				print_r($tweets_array);
 				
-			  	$JSONnodes = Array("Tweet"=>"Deputy","UserName"=>$originalName,"Date"=>"null","icon"=>$image_url,"BelongsTo"=>"null","size"=>"big");
+			  	$JSONnodes = Array("Tweet"=>"Deputy","UserName"=>$originalName,"Date"=>"null","icon"=>$image_url,"BelongsTo"=>"null","size"=>"big","name"=>"basic-graph");
 			  	$json = Array("nodes"=>Array(),"links" => Array());
 			  	array_push($json["nodes"], $JSONnodes);
 
