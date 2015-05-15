@@ -135,8 +135,8 @@
 
 				
 				\****************************************************/
-				echo "<div style='width:100%; background-color:#BFF9FF; border-bottom:1px dashed black;'>";
-				echo "<p>Is there: <b>".$key."</b> in <b>".$findme."?</b></p>";
+				//echo "<div style='width:100%; background-color:#BFF9FF; border-bottom:1px dashed black;'>";
+				//echo "<p>Is there: <b>".$key."</b> in <b>".$findme."?</b></p>";
 				
 
 
@@ -144,12 +144,12 @@
 				if ($isthere === false) {
 
 				/*	   UNCOMMENT TO DEBUG   *************/
-				echo "<p>No</p></div>";
+				//echo "<p>No</p></div>";
 				
 				} else {
 
 					/*  UNCOMMENT TO DEBUG   *************/
-				    echo "<p>Yes</p></div>"; 
+				   // echo "<p>Yes</p></div>"; 
 				    $sql = "INSERT INTO Hot (Name,image_url ) VALUES ('".$key."','sample')";
 
 					if ($conn->query($sql) === TRUE) {
@@ -177,7 +177,7 @@
 		function GetPartyImage($name){
 
 			$name = trim(preg_replace('/\s+/', ' ', $name));
-			echo "<font style='font-size:30px;'>".$name."</font>";
+			//echo "<font style='font-size:30px;'>".$name."</font>";
 
 			$dir = "/PoliticalTweets/backend/assets/";
 
@@ -331,22 +331,22 @@
 
 								$positionOfDeputy = $innerKey;
 								$DeputyParty = $source_party;
-								echo "KRATAME TO KEY TOU ".$innerValue["name"]." tou opoiou to komma einai to ".$DeputyParty." kai einai to ".$positionOfDeputy."<br>"; //Kratame ti thesh tou vouleuth gia th dhmiourgia tou link
+								//echo "KRATAME TO KEY TOU ".$innerValue["name"]." tou opoiou to komma einai to ".$DeputyParty." kai einai to ".$positionOfDeputy."<br>"; //Kratame ti thesh tou vouleuth gia th dhmiourgia tou link
 								
 
 								foreach ($json["nodes"] as $key2 => $value2) {
 
 									if($value2["Type"] == "P" && $value2["name"] == $DeputyParty){
 
-										echo "Vrhka to komma tou vouleuth".$innerValue["name"]." einai to :".$value2["name"]." kai einai sth thesi:".$key2."<br>";
+										//echo "Vrhka to komma tou vouleuth".$innerValue["name"]." einai to :".$value2["name"]." kai einai sth thesi:".$key2."<br>";
 										$JSONlink = Array("source" => $key2,"target" => $innerKey);
-										echo "<br>Uparxei to:";
-										    print_r($JSONlink);
-										    echo "<br>Sto:</br>";
-										    print_r($json["links"]);
-										    echo "?<br>";
+										//echo "<br>Uparxei to:";
+										    //print_r($JSONlink);
+										    //echo "<br>Sto:</br>";
+										  //  print_r($json["links"]);
+										    //echo "?<br>";
 										if (in_array($JSONlink, $json["links"])) {
-											echo "NAI<br>";
+											//echo "NAI<br>";
 										}
 										array_push($json["links"], $JSONlink);	
 
@@ -361,12 +361,12 @@
 
 
 
-
+			print_r($json);
 			$json_encoded = json_encode($json);
 
 			$dir = "data/".$timestamp;
 
-			
+			print_r($json_encoded);
 			    mkdir($dir);
 			
 
@@ -384,6 +384,7 @@
 			}
 			fwrite($myfile, $json_encoded);
 			fclose($myfile);
+
 		}
 
 		function GenerateTweetArray($originalName,$LastName,$image_url,$dir){
@@ -420,10 +421,10 @@
 					
 			  $info = curl_getinfo($ch); 
 			  $http_code = $info['http_code'];
-			  print_r($info);//print_r($http_code); FOR DEBUG TO HTTP HEADERS
+			  //print_r($info);//print_r($http_code); FOR DEBUG TO HTTP HEADERS
 			  curl_close($ch);//CLOSING CURL
 			  $json = json_decode($data, true);//decoding json from twitter 
-			  print_r($json);
+			  //print_r($json);
 			  $tweets_array= array();
 			  foreach ($json["statuses"] as $tweet) {
 
@@ -458,7 +459,7 @@
 				
 			  }
 
-				print_r($tweets_array);
+				//print_r($tweets_array);
 				
 			  	$JSONnodes = Array("Tweet"=>"Deputy","UserName"=>$originalName,"Date"=>"null","icon"=>$image_url,"BelongsTo"=>"null","size"=>"big","name"=>"basic-graph");
 			  	$json = Array("nodes"=>Array(),"links" => Array());
@@ -472,7 +473,7 @@
 			  		array_push($json["links"], $JSONlink);
 			  	}
 
-			  	print_r($json);
+			  	//print_r($json);
 			  	$json = json_encode($json);
 			  	//print_r($json);
 			  	$myfile = fopen($dir."/".$LastName." ".$originalName."-data.json", "w") or die("Unable to open file!");
@@ -489,6 +490,8 @@
 			return $string; 
 
 		} 
+
+		
 
 		
 

@@ -1,9 +1,14 @@
-
 <html>
-
 <head>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+  
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
 <meta charset="utf-8">
 <style>
@@ -32,37 +37,40 @@
         stroke: #BADB73;
     }
     
-    body {
-        background: rgb(55, 55, 55);
-        /* Old browsers */
-        
-        background: -moz-linear-gradient(top, rgba(55, 55, 55, 1) 0%, rgba(0, 0, 0, 1) 100%);
-        /* FF3.6+ */
-        
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(55, 55, 55, 1)), color-stop(100%, rgba(0, 0, 0, 1)));
-        /* Chrome,Safari4+ */
-        
-        background: -webkit-linear-gradient(top, rgba(55, 55, 55, 1) 0%, rgba(0, 0, 0, 1) 100%);
-        /* Chrome10+,Safari5.1+ */
-        
-        background: -o-linear-gradient(top, rgba(55, 55, 55, 1) 0%, rgba(0, 0, 0, 1) 100%);
-        /* Opera 11.10+ */
-        
-        background: -ms-linear-gradient(top, rgba(55, 55, 55, 1) 0%, rgba(0, 0, 0, 1) 100%);
-        /* IE10+ */
-        
-        background: linear-gradient(to bottom, rgba(55, 55, 55, 1) 0%, rgba(0, 0, 0, 1) 100%);
-        /* W3C */
-        
-        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#373737', endColorstr='#000000', GradientType=0);
-        /* IE6-9 */
-    }
+  body{
+    margin-top: 80px;
+background-image: url("background.jpg");
+background-size: contain;
+}
 </style>
-
+</head>
 <body>
+<nav class="navbar navbar-default navbar-fixed-top">
+      <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" style="  padding-top: 5px;" href="#">Political<br>Tweets</a>
+        </div>
 
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">HOME</a></li>
+            <li><a href=".">REFRESH</a></li>
+            <li><a href="#">INFO</a></li>
+            <li><a href="#">SHARE</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+  
 
-    <script>
+<script>
         var width = window.innerWidth - 20;
         var height = window.innerHeight - 20;
         imagesw = 130;
@@ -88,10 +96,12 @@
 
 
         var jsonfile = "../backend/data/" + datetime + "/basic-graph-data.json";
+        console.log(datetime);
+        console.log(jsonfile);
 
-        UpdateGraph(width, height, r, color, force, svg, jsonfile);
+        UpdateGraph(width, height, r, color, force, svg, jsonfile,640,40);
 
-        function UpdateGraph(width, height, r, color, force, svg, json) {
+        function UpdateGraph(width, height, r, color, force, svg, json,TimescrollerX,TimescrollerY) {
 
             svg.selectAll("*").remove();
 
@@ -114,9 +124,32 @@
 
                                 d.x = Math.max(25, Math.min(width - 20, d.x));
                                 d.y = Math.max(40, Math.min(height - 25, d.y));
-                                console.log(Math.round(Scale(d.x,25,width)));
-                                return "translate(" + [d.x, d.y] + ")"
+                                var hours = Math.round(ScaleH(d.x,25,width));
+                                var days = Math.round(ScaleD(d.y,40,height-40));
+                                console.log(("0" + hours)
+                                    +":00 "
+                                    +" "
+                                    +currentdate.getDate()-days
+                                    +"-"
+                                    +currentdate.getMonth() + 1
+                                    +"-"
+                                    +currentdate.getFullYear() );
+                                
+                                
+                            
+                            var currentdate = new Date();
+                            var datetime = (currentdate.getFullYear()) + "-" + ("0" + (currentdate.getMonth() + 1)).slice(-2) + "-" + ("0" + (currentdate.getDate()-days)).slice(-2) + "-" + ("0" + hours).slice(-2);
+                            console.log(datetime);
+                                
+
+                                d3.select("#date")
+                                  .text( 
+                                    "ei"
+                                    );
+
+                                return "translate(" + [d.x, d.y] + ")";
                             })
+
 
                         d3.select("#yDriver") // yDriver
                             .attr("x1", function(d) {
@@ -137,7 +170,8 @@
                                 d.y2 += d3.event.dy;
                                 d.y2 = Math.max(40, Math.min(height - 25, d.y2));
                                 return d.y2;
-                            });
+                            })
+                            .style("opacity","1");
 
                         d3.select("#xDriver") // xDriver
                             .attr("x1", function(d) {
@@ -158,7 +192,11 @@
                                 d.y2 += d3.event.dy;
                                 d.y2 = Math.max(40, Math.min(height - 25, d.y2));
                                 return d.y2;
-                            });
+                            })
+                            .style("opacity","1");;
+
+
+                        
 
 
 
@@ -174,6 +212,22 @@
                             .ease("elastic")
                             .duration(500)
                             .attr("r", 35);
+
+                           d3.select("#time-scroller").attr("x",function(d){
+                            var hours = Math.round(ScaleH(d.x,25,width));
+                            var days = Math.round(ScaleD(d.y,40,height-40));
+                            
+                            var currentdate = new Date();
+                            var datetime = (currentdate.getFullYear()) + "-" + ("0" + (currentdate.getMonth() + 1)).slice(-2) + "-" + ("0" + (currentdate.getDate()-days)).slice(-2) + "-" + ("0" + hours).slice(-2);
+                            console.log(datetime);
+
+
+                            UpdateGraph(width, height, r, color, force, svg, "../backend/data/" + datetime + "/" + "basic-graph-data.json",d.x,d.y);
+                            
+                           })
+                            
+
+
                     })
                     .on("dragstart", function(d) {
 
@@ -184,10 +238,16 @@
                             .duration(500)
                             .attr("r", 40);
 
+                        d3.select("#xDriver")
+                        .style("opacity",1); // xDriver
+
+                        d3.select("#yDriver")
+                        .style("opacity",1); // yDriver
+
                     });
 
-                
-                      setTimeScroller(200,200);
+                                      
+                      setTimeScroller(TimescrollerX,TimescrollerY);
 
                 function setTimeScroller(holderX, holderY) {
 
@@ -292,11 +352,11 @@
                     .call(xAxis);
 
                 var y = d3.scale.linear()
-                    .domain([2, 1])
+                    .domain([0, 2])
                     .range([5, height - 30]);
 
 
-                function Scale(x,start,end){
+                function ScaleH(x,start,end){
 
                   var z = end/24;
 
@@ -308,9 +368,21 @@
 
                 }
 
+                function ScaleD(x,start,end){
+
+                  var z = end/2;
+
+                  start = start/z;
+                  end = end/z;
+                  x = x/z;
+                  return x;
+                  
+
+                }
+
                
 
-                console.log(Scale(300,20,1200));
+               
                     
 
                  
@@ -336,7 +408,7 @@
                     .enter().append("g")
                     .on('dblclick', function(d) {
                         if (d.Type != "M" && d.Type != "P") {
-                            UpdateGraph(width, height, r, color, force, svg, "../backend/data/" + datetime + "/" + d.name + "-data.json");
+                            UpdateGraph(width, height, r, color, force, svg, "../backend/data/" + datetime + "/" + d.name + "-data.json",200,200);
                         }
                     })
                     .on('click', function(d) {
@@ -404,6 +476,28 @@
                             return size;
                         }
                     });
+
+
+                var date = svg.append("text")
+                            .attr("id","date")
+                            .attr("x",width-300)
+                            .attr("y",100)
+                            .attr("fill","#BADB73")
+                            .attr("opacity",0.5)
+                            .attr("font-size",40)
+                            .text(function(){
+
+
+
+                            var hours = Math.round(ScaleH(TimescrollerX,25,width));
+                            var days = Math.round(ScaleD(TimescrollerY,40,height-40));
+                            
+                            var currentdate = new Date();
+                            var datetime = (currentdate.getFullYear()) + "-" + ("0" + (currentdate.getMonth() + 1)).slice(-2) + "-" + ("0" + (currentdate.getDate()-days)).slice(-2) + "-" + ("0" + hours).slice(-2);
+                            return datetime;
+
+
+                            }) ;
 
 
 
