@@ -1,76 +1,6 @@
-<html>
-<head>
-  
-  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-  
-    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-</head>
-<meta charset="utf-8">
-<style>
-    .node {
-        fill: rgba(0, 0, 0, 0);
-    }
-    
-    .link {
-        stroke: #BADB73;
-        stroke-opacity: .9;
-    }
-    
-    .axis text {
-        font: 10px sans-serif;
-        fill: white;
-    }
-    
-    .axis path,
-    .axis line {
-        fill: none;
-        stroke: white;
-        shape-rendering: crispEdges;
-    }
-    
-    .driver {
-        stroke: #BADB73;
-    }
-    
-  body{
-    margin-top: 80px;
-background-image: url("background.jpg");
-background-size: contain;
-}
-</style>
-</head>
-<body>
-<nav class="navbar navbar-default navbar-fixed-top">
-      <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" style="  padding-top: 5px;" href="#">Political<br>Tweets</a>
-        </div>
+        
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">HOME</a></li>
-            <li><a href=".">REFRESH</a></li>
-            <li><a href="#">INFO</a></li>
-            <li><a href="#">SHARE</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div>
-    </nav>
-  
 
-<script>
         var width = window.innerWidth - 20;
         var height = window.innerHeight - 20;
         imagesw = 130;
@@ -631,6 +561,3 @@ background-size: contain;
                 });
             });
         }
-    </script>
-
-</html>

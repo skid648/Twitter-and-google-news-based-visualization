@@ -1,0 +1,30 @@
+ .node {
+        fill: rgba(0, 0, 0, 0);
+    }
+    
+    .link {
+        stroke: #BADB73;
+        stroke-opacity: .9;
+    }
+    
+    .axis text {
+        font: 10px sans-serif;
+        fill: white;
+    }
+    
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: white;
+        shape-rendering: crispEdges;
+    }
+    
+    .driver {
+        stroke: #BADB73;
+    }
+    
+  body{
+    margin-top: 80px;
+background-image: url("background.jpg");
+background-size: contain;
+}
