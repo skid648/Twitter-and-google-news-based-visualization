@@ -56,25 +56,20 @@
                                 d.y = Math.max(40, Math.min(height - 25, d.y));
                                 var hours = Math.round(ScaleH(d.x,25,width));
                                 var days = Math.round(ScaleD(d.y,40,height-40));
-                                console.log(("0" + hours)
-                                    +":00 "
-                                    +" "
-                                    +currentdate.getDate()-days
-                                    +"-"
-                                    +currentdate.getMonth() + 1
-                                    +"-"
-                                    +currentdate.getFullYear() );
+                                
                                 
                                 
                             
                             var currentdate = new Date();
                             var datetime = (currentdate.getFullYear()) + "-" + ("0" + (currentdate.getMonth() + 1)).slice(-2) + "-" + ("0" + (currentdate.getDate()-days)).slice(-2) + "-" + ("0" + hours).slice(-2);
-                            console.log(datetime);
+                            
+                            console.log(hours)
+                                   var date = hours + ":00 february 2015";
                                 
 
                                 d3.select("#date")
                                   .text( 
-                                    "ei"
+                                    date
                                     );
 
                                 return "translate(" + [d.x, d.y] + ")";
