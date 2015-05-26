@@ -1,23 +1,23 @@
 <html>
-	<head> 
-	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	</head>
+	<body>
 		<?php
 				include 'dbcon.php';
+
 				$db_selected = mysql_select_db('XORIA', $dbc);
-				$handle = @fopen("voul.txt", "r");
-				$values='';
-				
-				while (!feof($handle))
-				{
-					$buffer = fgets($handle, 4096); 
-					list($FirstName,$LastName,$Nomos,$Komma)=explode(",",$buffer);
-					
-					echo $FirstName,$LastName,$Nomos,$Komma;
-					
-					$sql = "INSERT INTO VOULEUTES (FirstName, LastName, Nomos, Komma) VALUES('".ToUpper($FirstName)."','".ToUpper($LastName)."','".ToUpper($Nomos)."','".ToUpper($Komma)."')";   
+				$file = file_get_contents('vouleutes.txt', true);
+				$rows = explode("|", $file);
+				mysql_query("set names 'utf8'");
+
+				foreach ($rows as $value) {
+
+					$row = explode(",",$value);
+					$sql = "INSERT INTO Deputy (FirstName, LastName, Nomos, Komma) VALUES('".ToUpper($row[0])."','".ToUpper($row[1])."','".ToUpper($row[2])."','".ToUpper($row[3])."')";   
 					mysql_query($sql,$dbc) or die(mysql_error());
-		
+					
 				}
 
 
@@ -31,5 +31,5 @@
 		?>
 
 
-
+	</body>
 </html>
