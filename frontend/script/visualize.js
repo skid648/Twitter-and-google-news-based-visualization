@@ -16,7 +16,7 @@
             .linkDistance(100)
             .size([width, height]);
 
-        var svg = d3.select("body").append("svg")
+        var svg = d3.select(".video").append("svg")
             .attr("width", width)
             .attr("height", height);
 
@@ -333,7 +333,11 @@
                     .enter().append("g")
                     .on('dblclick', function(d) {
                         if (d.Type != "M" && d.Type != "P") {
+                            if(d.name != "basic-graph"){
+                            UpdateGraph(width, height, r, color, force, svg, "../backend/data/" + datetime + "/" + d.hash + "-data.json",200,200);
+                         }else{
                             UpdateGraph(width, height, r, color, force, svg, "../backend/data/" + datetime + "/" + d.name + "-data.json",200,200);
+                         }
                         }
                     })
                     .on('click', function(d) {

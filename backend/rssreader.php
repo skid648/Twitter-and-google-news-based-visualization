@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	</head>
@@ -179,7 +179,7 @@
 			$name = trim(preg_replace('/\s+/', ' ', $name));
 			//echo "<font style='font-size:30px;'>".$name."</font>";
 
-			$dir = "/PoliticalTweets/backend/assets/";
+			$dir = "/nodenews/backend/assets/";
 
 			switch ($name) {
 				case "ΤΟ ΠΟΤΑΜΙ":
@@ -283,17 +283,17 @@
 
 				if($value["Type"] == "P"){
 
-					$JSONnodes = Array("name" => $value["node"],"size" => "normal","icon"=>$value["url"], "Type"=> $value["Type"]);
+					$JSONnodes = Array("name" => $value["node"],"hash"=>hash('ripemd160',$value["node"]),"size" => "normal","icon"=>$value["url"], "Type"=> $value["Type"]);
 					array_push($json["nodes"], $JSONnodes);
 
 				}else if($value["Type"] == "D"){
 
-					$JSONnodes = Array("name" => $value["node"],"size" => "small","icon"=>$value["url"], "Type"=> $value["Type"]);
+					$JSONnodes = Array("name" => $value["node"],"hash"=>hash('ripemd160',$value["node"]),"size" => "small","icon"=>$value["url"], "Type"=> $value["Type"]);
 					array_push($json["nodes"], $JSONnodes);
 
 				}else if($value["Type"] == "T"){
 
-					$JSONnodes = Array("name" => $value["node"],"size" => $size,"tiny"=>$value["url"], "Type"=> $value["Type"]);
+					$JSONnodes = Array("name" => $value["node"],"hash"=>hash('ripemd160',$value["node"]),"size" => $size,"tiny"=>$value["url"], "Type"=> $value["Type"]);
 					array_push($json["nodes"], $JSONnodes);
 
 
@@ -476,7 +476,8 @@
 			  	//print_r($json);
 			  	$json = json_encode($json);
 			  	//print_r($json);
-			  	$myfile = fopen($dir."/".$LastName." ".$originalName."-data.json", "w") or die("Unable to open file!");
+			  	$name = $LastName." ".$originalName;
+			  	$myfile = fopen($dir."/".hash('ripemd160',$name)."-data.json", "w") or die("Unable to open file!");
 			  	fwrite($myfile, $json);
 				fclose($myfile);
 
