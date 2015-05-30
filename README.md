@@ -1,6 +1,6 @@
 <h2>About</h2>
 
-<h3>Twitter and Google News based D3.js visualization on political events<h3>
+<h3>Twitter and Google News based D3.js visualization on political events</h3>
 
 A force layout visualization on current "Hot" events. Data source will be twitter search content based on Google news headlines.
 The nodes will represent each entity's political origin ,the entity itself and the tweets posted for it respectively. The entire 
