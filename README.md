@@ -20,7 +20,7 @@ visualization is in realtime and it is also storing it's snapshots periodically.
 
 Feel free to ask anything.
 G. Thanasis
-[p11gkli@ionio.gr](p11gkli@ionio.gr)
+p11gkli@ionio.gr
 L. Anestis 
-[p11lato@ionio.gr](p11lato@ionio.gr)
+p11lato@ionio.gr
 
