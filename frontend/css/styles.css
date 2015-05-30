@@ -12,6 +12,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
     display: block
 }
 
+section.features-intro {
+  margin-top: -60px;
+}
 /*
 * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
 */
@@ -609,32 +612,17 @@ header i {
 /* ==========================================================================
 Video
 ========================================================================== */
-section.video i {
-    margin-right: 10px;
-    color: #323a45;
-    vertical-align: middle;
-    font-size: 50px;
-    -webkit-transition: color 300ms ease-in-out;
-    transition: color 300ms ease-in-out;
-}
-section.video h1 {
-    font-weight: 400;
-    font-size: 20px;
-}
+
 section.video {
-    padding: 60px 0;
-    background-color: #f6f7f9;
+    padding: 0px 0px 40px 0px;
+   
 }
-section.video a {
-    color: #323a45
+
+section.video #visualization{
+    z-index:-1;
+    padding-bottom:20px;
 }
-section.video a:hover, section.video a:focus {
-    color: #73d0da;
-    text-decoration: none;
-}
-section.video a:hover i, section.video a:focus i {
-    color: #73d0da
-}
+
 
 /* ==========================================================================
 Custom Slider Controls (Flickity)

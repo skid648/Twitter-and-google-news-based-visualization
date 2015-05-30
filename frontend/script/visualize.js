@@ -1,8 +1,8 @@
-        
+
 
 
         var width = window.innerWidth - 20;
-        var height = window.innerHeight - 20;
+        var height = window.innerHeight - 200;
         imagesw = 130;
         imagesh = 130;
         centerImageW = 70;
@@ -12,11 +12,11 @@
         var color = d3.scale.category20();
 
         var force = d3.layout.force()
-            .charge(-3000)
-            .linkDistance(100)
+            .charge(-2500)
+            .linkDistance(height/5)
             .size([width, height]);
 
-        var svg = d3.select(".video").append("svg")
+        var svg = d3.select(".video > #visualization").append("svg")
             .attr("width", width)
             .attr("height", height);
 
@@ -172,8 +172,8 @@
                     });
 
                                       
-                      setTimeScroller(TimescrollerX,TimescrollerY);
-
+                      //setTimeScroller(TimescrollerX,TimescrollerY);
+/*
                 function setTimeScroller(holderX, holderY) {
 
                     svg.selectAll("#Holder").remove();
@@ -262,8 +262,8 @@
                         .style("opacity", 0.1);
                 }
 
-
-                var x = d3.scale.linear()
+*/
+                /*var x = d3.scale.linear()
                     .domain([1, 24])
                     .range([30, width - 15]);
 
@@ -278,7 +278,7 @@
 
                 var y = d3.scale.linear()
                     .domain([0, 2])
-                    .range([5, height - 30]);
+                    .range([5, height - 30]);*/
 
 
                 function ScaleH(x,start,end){
@@ -312,19 +312,20 @@
 
                  
 
-                var yAxis = d3.svg.axis()
+                /*var yAxis = d3.svg.axis()
                     .scale(y)
                     .orient("left");
 
                 svg.append("g")
                     .attr("class", "y axis")
                     .attr("transform", "translate(21,0)")
-                    .call(yAxis);
+                    .call(yAxis);*/
 
                 var link = svg.selectAll(".link")
                     .data(graph.links)
                     .enter().append("line")
-                    .style("stroke-dasharray", ("1, 1"))
+                    /*.style("stroke-dasharray", ("1, 1"))*/
+                    .attr("name",function(d){ return d.source.name;})
                     .attr("class", "link")
                     .style("stroke-width", "1");
 
@@ -347,7 +348,7 @@
                 node
                     .attr("stroke", function(d) {
                         if (d.name != "main") {
-                            return "#1D1F1D";
+                            return "#f4d03f";
                         }
                     });
 
@@ -384,8 +385,8 @@
                     .attr("font-size", 12)
                     .attr("text-anchor", "middle")
                     .attr("stroke", "none")
-                    .attr("fill", "#FBFFE3")
-                    .attr("font-family", "Montserrat");
+                    .attr("fill", "#778899")
+                    .attr("font-family", "Roboto");
 
 
                 var clip = node.append("clipPath")
@@ -407,7 +408,7 @@
                     });
 
 
-                var date = svg.append("text")
+                /*var date = svg.append("text")
                             .attr("id","date")
                             .attr("x",width-300)
                             .attr("y",100)
@@ -426,7 +427,7 @@
                             return datetime;
 
 
-                            }) ;
+                            }) ;*/
 
 
 
@@ -497,55 +498,93 @@
 
 
                 force.on("tick", function() {
+
+
+
                     link.attr("x1", function(d) {
+
+                            if(d.source.name == "main"){
+                                return d.x = width/2;
+                            }else{
                             return d.x = Math.max(r, Math.min(width - r, d.source.x));
+                            }
                         })
                         .attr("y1", function(d) {
-                            return d.y = Math.max(r, Math.min(height - r, d.source.y));
+                            if(d.source.name == "main"){
+                                return d.y = height/2;
+                            }else{
+                            return d.y = Math.max(r, Math.min(height - 2*r, d.source.y));
+                            }
                         })
                         .attr("x2", function(d) {
                             return d.x = Math.max(r, Math.min(width - r, d.target.x));
                         })
                         .attr("y2", function(d) {
-                            return d.y = Math.max(r, Math.min(height - r, d.target.y));
+                            return d.y = Math.max(r, Math.min(height - 2*r, d.target.y));
                         });
 
                     /*node.attr("cx", function(d) { return d.x; })
                         .attr("cy", function(d) { return d.y; });*/
                     node.attr("cx", function(d) {
-                            return d.x = Math.max(r, Math.min(width - r, d.x));
+                            if(d.name=='main'){
+                                return d.x = width/2;
+                            }else{
+                                return d.x = Math.max(r, Math.min(width - r, d.x));
+                            }
                         })
                         .attr("cy", function(d) {
-                            return d.y = Math.max(r, Math.min(height - r, d.y));
+                            if(d.name=='main'){
+                                return d.y = height/2;
+                            }else{
+                               return d.y = Math.max(r, Math.min(height - 2*r, d.y));
+                            }
+                            
                         });
 
                     imgs.attr("x", function(d) {
                             if (d.name == "main") {
-                                return d.x - (centerImageW / 2);
+                                return d.x =width/2 - (centerImageW / 2);
                             } else {
                                 return d.x - (imagesw / 2);
                             }
                         })
                         .attr("y", function(d) {
                             if (d.name == "main") {
-                                return d.y - (centerImageH / 2);
+                                return d.y = height/2 - (centerImageH / 2);
                             } else {
                                 return d.y - (imagesh / 2);
                             }
                         })
 
                     circles.attr("cx", function(d) {
-                            return d.x;
+                           if(d.name=='main'){
+                                return d.x = width/2;
+                            }else{
+                               return d.x;
+                            }
                         })
                         .attr("cy", function(d) {
-                            return d.y;
+                            if(d.name=='main'){
+                                return d.y = height/2;
+                            }else{
+                               return d.y;
+                            }
+                            
                         });
 
                     clip.attr("cx", function(d) {
-                            return d.x;
+                            if(d.name=='main'){
+                                return d.x = width/2;
+                            }else{
+                               return d.x;
+                            }
                         })
                         .attr("cy", function(d) {
-                            return d.y;
+                           if(d.name=='main'){
+                                return d.y = height/2;
+                            }else{
+                               return d.y;
+                            }
                         });
 
                     label.attr("x", function(d) {

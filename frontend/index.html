@@ -5,6 +5,9 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html lang="en" class="no-js">
 	<head>
+    
+    
+    
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +21,7 @@
 		<link href="css/jquery.fancybox.css" rel="stylesheet">
 		<link href="css/flickity.css" rel="stylesheet" >
 		<link href="css/animate.css" rel="stylesheet">
+    
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
 		<link href="css/styles.css" rel="stylesheet">
@@ -33,9 +37,16 @@
 		<meta name="twitter:url" content="" />
 		<meta name="twitter:card" content="" />
 		 <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		 <link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,greek-ext,greek' rel='stylesheet' type='text/css'>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script src="http://d3js.org/d3.v3.min.js"></script>
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <link href="css/calendarstyle.css" rel="stylesheet">
+    <link href="style/final.css" rel="stylesheet">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -71,9 +82,26 @@
 			</section>
 		</header>
 		<section class="video" id="about">
-			<div class="container">
-				
-			</div>
+		<div id="visualization"></div>
+		<img id="instructions" src='img/instructions.png'></img>
+         <div id="calendarHeader"> Pick A Month </div>
+          <div id="daypicker">
+          <div id="close"><i class="fa fa-times-circle-o"></i></div>
+          <div id="January" class="month">January</div>
+          <div id="February" class="month">February</div>
+          <div id="March" class="month">March</div>
+          <div id="April" class="month">April</div>
+          <div id="May" class="month">May</div>
+          <div id="June" class="month">June</div>
+          <div id="July" class="month">July</div>
+          <div id="August" class="month">August</div>
+          <div id="September" class="month">September</div>
+          <div id="October" class="month">October</div>
+          <div id="November" class="month">November</div>
+          <div id="December" class="month">December</div>
+        </div>
+         <div id="calendarfoot"></div>
+       
 		</section>
 		<section class="features-intro">
 			<div class="container-fluid">
@@ -380,5 +408,6 @@
 		ga('create','UA-XXXXX-X');ga('send','pageview');
 		</script>
 		<script src="script/visualize.js"></script>
+    <script src="js/calendar.js"></script>
 	</body>
 </html>

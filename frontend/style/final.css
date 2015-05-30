@@ -3,7 +3,7 @@
     }
     
     .link {
-        stroke: #BADB73;
+        stroke: #f4d03f;
         stroke-opacity: .9;
     }
     
@@ -23,8 +23,5 @@
         stroke: #BADB73;
     }
     
-  body{
-    margin-top: 80px;
-background-image: url("background.jpg");
-background-size: contain;
+  
 }

@@ -1,0 +1,262 @@
+{
+    "nodes": [
+        {
+            "Tweet": "Deputy",
+            "UserName": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "Date": "null",
+            "icon": "http:\/\/upload.wikimedia.org\/wikipedia\/commons\/d\/d9\/Antonis_Samaras_October_2014.jpg",
+            "BelongsTo": "null",
+            "size": "big",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0394\u03b5\u03c2: \u03a3\u03b1\u03bc\u03b1\u03c1\u03ac\u03c2: \u0395\u03c0\u03af \u03c4\u03ad\u03c3\u03c3\u03b5\u03c1\u03b9\u03c2 \u03bc\u03ae\u03bd\u03b5\u03c2 \u03b5\u03af\u03bc\u03b1\u03c3\u03c4\u03b5 \u03b5\u03b3\u03ba\u03bb\u03c9\u03b2\u03b9\u03c3\u03bc\u03ad\u03bd\u03bf\u03b9 \u03c3\u03c4\u03bf \u03c0\u03b5\u03c1\u03b9\u03b8\u03ce\u03c1\u03b9\u03bf \u03c4\u03b7\u03c2 \u0395\u03c5\u03c1\u03ce\u03c0\u03b7\u03c2 http:\/\/t.co\/EvBsAYvhO6",
+            "UserName": "EOE.gr",
+            "Date": "Fri May 29 00:37:05 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/1673814999\/logo_normal.png",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u03a3\u03b1\u03bc\u03b1\u03c1\u03ac\u03c2: \u0395\u03b3\u03ba\u03bb\u03c9\u03b2\u03b9\u03c3\u03bc\u03ad\u03bd\u03bf\u03b9 \u03c3\u03c4\u03bf \u03c0\u03b5\u03c1\u03b9\u03b8\u03ce\u03c1\u03b9\u03bf \u03c4\u03b7\u03c2 \u0395\u0395 https:\/\/t.co\/yK9zTV7XT0 via @sharethis",
+            "UserName": "Maria Theros",
+            "Date": "Thu May 28 23:54:23 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/461951443541307392\/-GUJQQQ4_normal.jpeg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "@neademokratia @AdonisGeorgiadi @samaras_antonis @Dora_Bakoyannis \u03c0\u03b1\u03c1\u03b1\u03ba\u03b1\u03bb\u03ce \u0391\u039c\u0395\u03a3\u03a9\u03a3 \u039c\u0397\u039d\u03a5\u03a3\u0397 https:\/\/t.co\/q2A1WXKfL6",
+            "UserName": "\u0391\u03c3\u03c4\u03b5\u03c1\u03cc\u03c3\u03ba\u03bf\u03bd\u03b7",
+            "Date": "Thu May 28 23:32:27 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/558773155439718403\/TlM_O7nb_normal.jpeg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u03a4\u03a5\u03a6\u039b\u0391 \u039d\u0391\u03a7\u0395 \u039f \u03a6\u03a1\u0391\u039d\u039a\u039f #Rajoy+#Samaras = #Fascisti \n\u03ba\u03b1\u03c4\u03b1\u03b3\u03c1\u03ac\u03c6\u03bf\u03bd\u03c4\u03b1\u03c2 \u03bc\u03b9\u03b1 \u03ad\u03be\u03c9\u03c3\u03b7 \u03c3\u03c4\u03b7\u03bd \u0399\u03c3\u03c0\u03b1\u03bd\u03af\u03b1 \u03b1\u03c0\u03bf Jaime Alekos\nhttps:\/\/t.co\/oHygLrpxOb",
+            "UserName": "Nellie Oleson ",
+            "Date": "Thu May 28 22:14:54 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/577833638160506880\/Wj6ZTi3g_normal.jpeg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "@samaras_antonis \u03c0\u03c1\u03cc\u03b5\u03b4\u03c1\u03b5 \u03c4\u03b9 \u03ba\u03ac\u03bd\u03b5\u03b9\u03c2? \u03b8\u03b1 \u03c4\u03bf\u03c5\u03c2 \u03b1\u03c6\u03ae\u03c3\u03b5\u03b9\u03c2 \u03bd\u03b1 \u03b4\u03b9\u03b1\u03bb\u03cd\u03c3\u03bf\u03c5\u03bd \u03c4\u03b7 \u03c7\u03ce\u03c1\u03b1?",
+            "UserName": "dimitris ntasos",
+            "Date": "Thu May 28 21:41:58 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/1931910159\/112709111556_normal.jpg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u03a3\u03b1\u03bc\u03b1\u03c1\u03ac\u03c2: \u0395\u03af\u03bc\u03b1\u03c3\u03c4\u03b5 \u03b5\u03b3\u03ba\u03bb\u03c9\u03b2\u03b9\u03c3\u03bc\u03ad\u03bd\u03bf\u03b9 \u03c3\u03c4\u03bf \u03c0\u03b5\u03c1\u03b9\u03b8\u03ce\u03c1\u03b9\u03bf \u03c4\u03b7\u03c2 \u0395\u03c5\u03c1\u03ce\u03c0\u03b7\u03c2 http:\/\/t.co\/vFhVZtMjbG",
+            "UserName": "dictyo.gr",
+            "Date": "Thu May 28 21:41:06 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/1517193714\/logo-diktyo-peza_normal.jpg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u03a3\u03b1\u03bc\u03b1\u03c1\u03ac\u03c2: \u0395\u03af\u03bc\u03b1\u03c3\u03c4\u03b5 \u03b5\u03b3\u03ba\u03bb\u03c9\u03b2\u03b9\u03c3\u03bc\u03ad\u03bd\u03bf\u03b9 \u03c3\u03c4\u03bf \u03c0\u03b5\u03c1\u03b9\u03b8\u03ce\u03c1\u03b9\u03bf \u03c4\u03b7\u03c2 \u0395\u03c5\u03c1\u03ce\u03c0\u03b7\u03c2 http:\/\/t.co\/shGxENOJXh",
+            "UserName": "dictyo.gr",
+            "Date": "Thu May 28 21:40:39 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/1517193714\/logo-diktyo-peza_normal.jpg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0394\u03b5\u03bd \u03ae\u03c4\u03b1\u03bd \u03b9\u03b4\u03c1\u03c5\u03c4\u03ae\u03c2 \u03c4\u03b7\u03c2 \u03b1\u03c4\u03b5\u03ba\u03bc\u03b7\u03c1\u03af\u03c9\u03c4\u03b7\u03c2 \u03c0\u03bf\u03bb\u03b9\u03c4\u03b9\u03ba\u03ae\u03c2 \u03bf #samaras ... \u03ba\u03b1\u03b9  \u03cc\u03c4\u03b9 \u03bf #tsipras \u03b4\u03b5\u03bd \u03b8\u03b1 \u03c0\u03b1\u03c1\u03b1\u03c3\u03c4\u03b5\u03af \u03c3\u03c4\u03b7\u03bd \u03c4\u03b5\u03bb\u03b5\u03c4\u03ae \u03bb\u03ae\u03be\u03b7\u03c2 ..\n@Katselos @k_staikos",
+            "UserName": "\u03c7\u03b1\u03c4\u03b6\u03ae\u03c2 ",
+            "Date": "Thu May 28 20:18:43 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/599997897497714688\/ITPUzivq_normal.jpg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0391. \u03a3\u03b1\u03bc\u03b1\u03c1\u03ac\u03c2: \u038c\u03c7\u03b9 \u03c3\u03b5 \u03bb\u03b5\u03c5\u03ba\u03ae \u03b5\u03c0\u03b9\u03c4\u03b1\u03b3\u03ae \u03c3\u03c4\u03b7\u03bd \u03ba\u03c5\u03b2\u03ad\u03c1\u03bd\u03b7\u03c3\u03b7 - http:\/\/t.co\/PG0vLkPqJT http:\/\/t.co\/u6EU6I1l8z",
+            "UserName": "diasimesnet",
+            "Date": "Thu May 28 20:16:37 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/497681434199326721\/qp1Be3Js_normal.jpeg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "@pasok @neademokratia @EVenizelos @samaras_antonis \u03a0\u03c9\u03c2 \u03ba\u03b1\u03c4\u03b1\u03b4\u03b5\u03c7\u03b8\u03ae\u03ba\u03b1\u03c4\u03b5 \u03c4\u03bf \u03a4\u03cc\u03bc\u03c3\u03b5\u03bd \u03bd\u03b1 \u03bb\u03ad\u03b5\u03b9 300\u03b5\u03c5\u03c1\u03ce \u03b5\u03af\u03bd\u03b1\u03b9 \u03ba \u03c0\u03bf\u03bb\u03bb\u03b1 \u03b3\u03b9\u03b1\u03c4\u03af \u03ae\u03c3\u03b8\u03b5 \u0392\u03b1\u03bb\u03ba\u03ac\u03bd\u03b9\u03bf\u03b9; \u039d\u03c4\u03c1\u03bf\u03c0\u03ae!",
+            "UserName": "George K. Ktistakis",
+            "Date": "Thu May 28 19:39:23 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/2939262156\/a7f430db0b947964f1a40181c355add2_normal.jpeg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "RT @mulatu18: \u0399\u03c3\u03c0\u03b1\u03bd\u03b9\u03b1 \u03c4\u03bf \u03a1\u03b1\u03c7\u03bf\u03ca \u03c4\u03bf\u03c5 \u03ba\u03bf\u03bb\u03bb\u03b7\u03c4\u03bf\u03c5 \u03c4\u03bf\u03c5 #Samaras\n\u03ba\u03b1\u03bd\u03bf\u03bd\u03b9\u03c3\u03c4\u03b5 \u03c3\u03c4\u03b9\u03c2 \u03b5\u03ba\u03bb\u03bf\u03b3\u03b5\u03c2 \u03c0\u03bf\u03c5\u03c1\u03c7\u03bf\u03bd\u03c4\u03b1\u03b9\n\u03bd\u03b1 \u03ba\u03bf\u03c5\u03bb\u03b1\u03b8\u03b5\u03b9\u03c4\u03b5 \u03c0\u03c1\u03bf\u03ba\u03b1\u03c4\u03b1\u03b2\u03bf\u03bb\u03b9\u03ba\u03b1 \u03b5\u03c5\u03c7\u03bf\u03bc\u03b1\u03b9 https:\/\/t.co\u2026",
+            "UserName": "Henry Chinaski",
+            "Date": "Thu May 28 18:56:18 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/3661614772\/d3437c7720cdf4c892d10eb8cb1d1c04_normal.jpeg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0399\u03c3\u03c0\u03b1\u03bd\u03b9\u03b1 \u03c4\u03bf \u03a1\u03b1\u03c7\u03bf\u03ca \u03c4\u03bf\u03c5 \u03ba\u03bf\u03bb\u03bb\u03b7\u03c4\u03bf\u03c5 \u03c4\u03bf\u03c5 #Samaras\n\u03ba\u03b1\u03bd\u03bf\u03bd\u03b9\u03c3\u03c4\u03b5 \u03c3\u03c4\u03b9\u03c2 \u03b5\u03ba\u03bb\u03bf\u03b3\u03b5\u03c2 \u03c0\u03bf\u03c5\u03c1\u03c7\u03bf\u03bd\u03c4\u03b1\u03b9\n\u03bd\u03b1 \u03ba\u03bf\u03c5\u03bb\u03b1\u03b8\u03b5\u03b9\u03c4\u03b5 \u03c0\u03c1\u03bf\u03ba\u03b1\u03c4\u03b1\u03b2\u03bf\u03bb\u03b9\u03ba\u03b1 \u03b5\u03c5\u03c7\u03bf\u03bc\u03b1\u03b9 https:\/\/t.co\/ItemI2WokY",
+            "UserName": "Nellie Oleson ",
+            "Date": "Thu May 28 18:53:38 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/577833638160506880\/Wj6ZTi3g_normal.jpeg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u00ab\u039d\u03b1 \u03c4\u03b7\u03bb\u03b5\u03c6\u03c9\u03bd\u03ae\u03c3\u03b5\u03b9 \u03bf \u03a3\u03b1\u03bc\u03b1\u03c1\u03ac\u03c2 \u03c3\u03c4\u03bf\u03bd \u03a4\u03c3\u03af\u03c0\u03c1\u03b1\u00bb http:\/\/t.co\/9WgUfV24im",
+            "UserName": "FNEWS",
+            "Date": "Thu May 28 18:22:54 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/504111647258988544\/bzYpy6UV_normal.png",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u00ab\u039d\u03b1 \u03c4\u03b7\u03bb\u03b5\u03c6\u03c9\u03bd\u03ae\u03c3\u03b5\u03b9 \u03bf \u03a3\u03b1\u03bc\u03b1\u03c1\u03ac\u03c2 \u03c3\u03c4\u03bf\u03bd \u03a4\u03c3\u03af\u03c0\u03c1\u03b1\u00bb http:\/\/t.co\/1XgD9ai1gA",
+            "UserName": "matakias24",
+            "Date": "Thu May 28 18:22:51 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/1626602544\/logo_matakias_srogilo_normal.png",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u00ab\u039d\u03b1 \u03c4\u03b7\u03bb\u03b5\u03c6\u03c9\u03bd\u03ae\u03c3\u03b5\u03b9 \u03bf \u03a3\u03b1\u03bc\u03b1\u03c1\u03ac\u03c2 \u03c3\u03c4\u03bf\u03bd \u03a4\u03c3\u03af\u03c0\u03c1\u03b1\u00bb http:\/\/t.co\/w2Ebe26IKe",
+            "UserName": "Tragiko.net",
+            "Date": "Thu May 28 18:22:42 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/436489048253681664\/SS6bJeG5_normal.jpeg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "RT @ELSWHAT143: \u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3...\u03ad\u03bd\u03b1\u03c2 \u03c0\u03c1\u03c9\u03b8\u03c5\u03c0\u03bf\u03c5\u03c1\u03b3\u03cc\u03c2 \u03bc\u03b5 \u03b4\u03b9\u03b1\u03af\u03c3\u03b8\u03b7\u03c3\u03b7-VIDEO - http:\/\/t.co\/axy7idHxBY http:\/\/t.co\/ZnBYaBidBO",
+            "UserName": "eirini kanioura",
+            "Date": "Thu May 28 17:51:11 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/544958315344986114\/tvSnr3pW_normal.jpeg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u039d\u0395\u039f\u039b\u0395\u03a1\u0391 http:\/\/t.co\/FHUBZPb7ug",
+            "UserName": "neolera",
+            "Date": "Thu May 28 17:44:42 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/1445846065\/avatar_normal.jpg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3...\u03ad\u03bd\u03b1\u03c2 \u03c0\u03c1\u03c9\u03b8\u03c5\u03c0\u03bf\u03c5\u03c1\u03b3\u03cc\u03c2 \u03bc\u03b5 \u03b4\u03b9\u03b1\u03af\u03c3\u03b8\u03b7\u03c3\u03b7-VIDEO - http:\/\/t.co\/axy7idHxBY http:\/\/t.co\/ZnBYaBidBO",
+            "UserName": "\u03a0\u03b1\u03bd\u03bf\u03c1\u03b1\u03bc\u03af\u03be",
+            "Date": "Thu May 28 17:41:33 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/564533890291740672\/WTqITqzZ_normal.jpeg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "RT @spiridouladim1: \u039c\u03b9\u03c7\u03b5\u03bb\u03ac\u03ba\u03b7\u03c2: \u039c\u03ae\u03c0\u03c9\u03c2 \u03b8\u03b1 \u03ad\u03c0\u03c1\u03b5\u03c0\u03b5 \u03bd\u03b1 \u03c3\u03b7\u03ba\u03ce\u03c3\u03b5\u03b9 \u03c4\u03bf \u03c4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03bf \u03bf \u03a3\u03b1\u03bc\u03b1\u03c1\u03ac\u03c2 \u03ba\u03b1\u03b9 \u03bd\u03b1 \u03bc\u03b9\u03bb\u03ae\u03c3\u03b5\u03b9 \u03bc\u03b5 \u03c4\u03bf\u03bd \u03a4\u03c3\u03af\u03c0\u03c1\u03b1; http:\/\/t.co\/BcMY3OIgSg @velop\u2026",
+            "UserName": "\u039a\u03c5\u03c1\u03b9\u03ac\u03ba\u03bf\u03c2 \u0392\u03b5\u03bb\u03cc\u03c0\u03bf\u03c5\u03bb\u03bf\u03c2",
+            "Date": "Thu May 28 17:39:37 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/573877036076437505\/6ZX-q3ns_normal.jpeg",
+            "BelongsTo": "\u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        }
+    ],
+    "links": [
+        {
+            "source": 1,
+            "target": 0
+        },
+        {
+            "source": 2,
+            "target": 0
+        },
+        {
+            "source": 3,
+            "target": 0
+        },
+        {
+            "source": 4,
+            "target": 0
+        },
+        {
+            "source": 5,
+            "target": 0
+        },
+        {
+            "source": 6,
+            "target": 0
+        },
+        {
+            "source": 7,
+            "target": 0
+        },
+        {
+            "source": 8,
+            "target": 0
+        },
+        {
+            "source": 9,
+            "target": 0
+        },
+        {
+            "source": 10,
+            "target": 0
+        },
+        {
+            "source": 11,
+            "target": 0
+        },
+        {
+            "source": 12,
+            "target": 0
+        },
+        {
+            "source": 13,
+            "target": 0
+        },
+        {
+            "source": 14,
+            "target": 0
+        },
+        {
+            "source": 15,
+            "target": 0
+        },
+        {
+            "source": 16,
+            "target": 0
+        },
+        {
+            "source": 17,
+            "target": 0
+        },
+        {
+            "source": 18,
+            "target": 0
+        },
+        {
+            "source": 19,
+            "target": 0
+        }
+    ]
+}

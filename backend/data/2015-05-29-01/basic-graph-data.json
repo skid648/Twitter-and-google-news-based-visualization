@@ -1,0 +1,125 @@
+{
+    "nodes": [
+        {
+            "name": "main",
+            "size": "big",
+            "icon": "..\/backend\/assets\/center.png",
+            "Type": "M"
+        },
+        {
+            "name": "\u0391\u039b\u0395\u039e\u0399\u039f\u03a3 \u03a4\u03a3\u0399\u03a0\u03a1\u0391\u03a3",
+            "hash": "adfbc645997d1d6e69a570b5587e1ffac0c8307e",
+            "size": "small",
+            "icon": "http:\/\/asset.tovima.gr\/vimawebstatic\/\/4FD08321545B960CB4040B951F17DB40.jpg",
+            "Type": "D"
+        },
+        {
+            "name": "\u03a3\u03a5\u03a1\u0399\u0396\u0391",
+            "hash": "ec593ff65124fb3c418ad097aea794a002e917bb",
+            "size": "normal",
+            "icon": "\/nodenews\/backend\/assets\/syriza.jpg",
+            "Type": "P"
+        },
+        {
+            "name": "\u0391\u039d\u03a4\u03a9\u039d\u0399\u039f\u03a3 \u03a3\u0391\u039c\u0391\u03a1\u0391\u03a3",
+            "hash": "41a74ffe0769d8b7e37de8fb26f90cc55a9f7406",
+            "size": "small",
+            "icon": "http:\/\/upload.wikimedia.org\/wikipedia\/commons\/d\/d9\/Antonis_Samaras_October_2014.jpg",
+            "Type": "D"
+        },
+        {
+            "name": "\u039d.\u0394.",
+            "hash": "20cdd9a7966e8cfbaacb313aa1801a194e52f816",
+            "size": "normal",
+            "icon": "\/nodenews\/backend\/assets\/nd.jpg",
+            "Type": "P"
+        },
+        {
+            "name": "\u0395\u03a5\u0391\u0393\u0393\u0395\u039b\u039f\u03a3 \u0392\u0395\u039d\u0399\u0396\u0395\u039b\u039f\u03a3",
+            "hash": "33325db257466779b0fc4e2730937dc272d6dd24",
+            "size": "small",
+            "icon": "http:\/\/s.enet.gr\/resources\/2009-10\/1venizelos-thumb-large.jpg",
+            "Type": "D"
+        },
+        {
+            "name": "\u03a0\u0391.\u03a3\u039f.\u039a.",
+            "hash": "3681fe41b919079cfda65f932a80811233e77c05",
+            "size": "normal",
+            "icon": "\/nodenews\/backend\/assets\/pasok.jpg",
+            "Type": "P"
+        },
+        {
+            "name": "\u039b\u0395\u03a9\u039d\u0399\u0394\u0391\u03a3 \u0393\u03a1\u0397\u0393\u039f\u03a1\u0391\u039a\u039f\u03a3",
+            "hash": "4775da2bbdc3628a4fb76e2cbbc0eb8f87f48d70",
+            "size": "small",
+            "icon": "http:\/\/agenda-news.gr\/wp-content\/uploads\/2014\/05\/grigorakos.jpg",
+            "Type": "D"
+        }
+    ],
+    "links": [
+        {
+            "source": 2,
+            "target": 1
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 0,
+            "target": 4
+        },
+        {
+            "source": 0,
+            "target": 6
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 4,
+            "target": 3
+        },
+        {
+            "source": 0,
+            "target": 4
+        },
+        {
+            "source": 0,
+            "target": 6
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 0,
+            "target": 4
+        },
+        {
+            "source": 6,
+            "target": 5
+        },
+        {
+            "source": 0,
+            "target": 6
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 0,
+            "target": 4
+        },
+        {
+            "source": 0,
+            "target": 6
+        },
+        {
+            "source": 6,
+            "target": 7
+        }
+    ]
+}

@@ -1,6 +1,27 @@
 ﻿<html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style>
+			.notification{
+				width: 90%;
+				box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+				margin:10px;
+				background-color: #8DB986;
+				color:white;
+				padding: 5px;
+			}
+			.error{
+				width: 90%;
+				box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+				margin:10px;
+				background-color: #951F2B;
+				color:white;
+				padding: 5px;
+			}
+			body{
+				background-color:#2C2B26;
+			}
+		</style>
 	</head>
 	<body>
 		<?php
@@ -35,6 +56,7 @@
 
 
 		require("credentials.php");
+		ini_set('display_errors', 'On');
 
 		$vouleutes=array();
 
@@ -43,7 +65,7 @@
 		$conn = new mysqli($servername, $username, $password, $dbname);
 																						// Check connection
 		if ($conn->connect_error) {
-		    die("Connection failed: " . $conn->connect_error);
+		    die("<div class='error'>Connection failed: " . $conn->connect_error.'</div>');
 		} 
 
 		$sql = "SELECT FirstName, LastName FROM vouleutes";
@@ -54,15 +76,15 @@
 		        array_push($vouleutes,$row["LastName"]);
 		    }
 		} else {
-		    echo "0 results";
+		    echo "<div class='notification'>0 results</div>";
 		}
 		
 		$sql = "TRUNCATE TABLE Hot";
 
 					if ($conn->query($sql) === TRUE) {
-					    echo "Emptied";
+					    echo "<div class='notification'>Emptied table Hot...</div>";
 					} else {
-					    echo "Error emptying record: " . $conn->error;
+					    echo "<div class='error'>Error emptying record: " . $conn->error."</div>";
 					}
 
 		/***************************************\
@@ -154,7 +176,7 @@
 
 					if ($conn->query($sql) === TRUE) {
 					} else {
-					    echo "Error adding record: " . $conn->error;
+					    echo "<div class='error'>Error adding record: " . $conn->error."</div>";
 					}
 				    
 				}
@@ -202,6 +224,9 @@
 					break;
 				case "Κ.Κ.Ε.":
 					$dir = $dir."kke.jpg";
+					break;
+				default:
+					$dir = $dir."pasok.jpg";
 					break;
 			
 			}
@@ -269,7 +294,7 @@
 				    
 			    }
 			} else {
-			    echo "0 results";
+			    echo "<div class='error'>0 results, No deputies in Hot table!</div>";
 			}
 
 			$JSONnodes = Array("name" => "main","size" => "big","icon"=>"../backend/assets/center.png", "Type"=> "M");
@@ -360,23 +385,24 @@
 			}
 
 
-
-			print_r($json);
-			$json_encoded = json_encode($json);
-
+			echo "<div class='notification'> <b>Printing Json with Nodes<hr></b><br>";
+			
+			$json_encoded = json_encode($json,JSON_PRETTY_PRINT);
+			print_r($json_encoded);
+			echo "</div>";
 			$dir = "data/".$timestamp;
 
-			print_r($json_encoded);
+			echo"<div class='error'> <p>MKDIR ERROR</p><hr>";
 			    mkdir($dir);
-			
+			echo "</div>";
 
-			$myfile = fopen($dir."/basic-graph-data.json", "w") or die("Unable to open file!");
+			$myfile = fopen($dir."/basic-graph-data.json", "w") or die("<div class='error'>Unable to open basic graph data file!</div>");
 			foreach ($json["nodes"] as $key => $value) {
 
 				if($value["Type"] == "D"){
 					//echo "<font style='font-size:50px;'>O ".$value["name"]."</font><br>";
 					$name = explode(" ",$value["name"]);
-					
+					echo "<div class='notification'> <p><b>Generate tweet requests for: ".$name[1]." ".$name[0]."</b></p><hr>";
 					GenerateTweetArray($name[1],$name[0],$value["icon"],$dir);
 
 				}
@@ -424,19 +450,22 @@
 			  //print_r($info);//print_r($http_code); FOR DEBUG TO HTTP HEADERS
 			  curl_close($ch);//CLOSING CURL
 			  $json = json_decode($data, true);//decoding json from twitter 
-			  //print_r($json);
+			  echo "<div class='notification'> <p>Json from Twitter response</p><hr>";
+			  print_r($json);
+			  echo "</div>";
 			  $tweets_array= array();
+			  echo "<div class='notification'> <p>Foreaching twitter response</p><hr>";
 			  foreach ($json["statuses"] as $tweet) {
 
 			  	$text_tweet = $tweet["text"];
-			  	
+			  	echo "<p>".$text_tweet."</p><hr>";
 		 		$user_id = $tweet["user"]["name"];
 				$datetime = $tweet["created_at"];
 				$profile_image = $tweet["user"]['profile_image_url'];
-		        $stripped_tweet = preg_replace('/(#|@)\S+|(RT:)|(RT)/', '', $text_tweet); // remove hashtags
-		        $stripped_tweet = preg_replace('#\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))#', '', $stripped_tweet);
-				$stripped_tweet = trim(preg_replace('/\s+/', ' ', $stripped_tweet ));
-
+		        //$stripped_tweet = preg_replace('/(#|@)\S+|(RT:)|(RT)/', '', $text_tweet); // remove hashtags
+		        //$stripped_tweet = preg_replace('#\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))#', '', $stripped_tweet);
+				//$stripped_tweet = trim(preg_replace('/\s+/', ' ', $stripped_tweet ));
+				$stripped_tweet = $text_tweet;
 				$found = false;
 
 				foreach ($tweets_array as $value) {
@@ -458,8 +487,10 @@
 				
 				
 			  }
-
+			  echo "</div>";
+			  	
 				//print_r($tweets_array);
+				
 				
 			  	$JSONnodes = Array("Tweet"=>"Deputy","UserName"=>$originalName,"Date"=>"null","icon"=>$image_url,"BelongsTo"=>"null","size"=>"big","name"=>"basic-graph");
 			  	$json = Array("nodes"=>Array(),"links" => Array());
@@ -474,12 +505,15 @@
 			  	}
 
 			  	//print_r($json);
-			  	$json = json_encode($json);
-			  	//print_r($json);
+			  	$json = json_encode($json,JSON_PRETTY_PRINT);
+			  	echo "<div class='notification'> <p>Printing Array with Tweets:</p><hr>";
+			  	print_r($json);
+			  	echo "</div>";
 			  	$name = $LastName." ".$originalName;
 			  	$myfile = fopen($dir."/".hash('ripemd160',$name)."-data.json", "w") or die("Unable to open file!");
 			  	fwrite($myfile, $json);
 				fclose($myfile);
+				echo "</div> ";
 
 		}
 

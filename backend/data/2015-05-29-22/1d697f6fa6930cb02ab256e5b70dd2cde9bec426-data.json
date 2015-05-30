@@ -1,0 +1,28 @@
+{
+    "nodes": [
+        {
+            "Tweet": "Deputy",
+            "UserName": "\u0394\u0395\u03a1\u039c\u0399\u03a4\u0396\u0391\u039a\u0397\u03a3",
+            "Date": "null",
+            "icon": "http:\/\/cretalive.s3.amazonaws.com\/images\/made\/-\/img\/bg\/680x382_680_382_imagesmadeimagesremotehttp_cretalive.s3.amazonaws.com49130kostis-dermitzakis_542_382_s.jpg.jpg",
+            "BelongsTo": "null",
+            "size": "big",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u03a4\u0397\u039d \u039a\u03a5\u03a1\u0399\u0391\u039a\u0397 \u0398\u0391 \u0395\u0399\u039c\u0391\u03a3\u03a4\u0395 \u039a\u0391\u039b\u0395\u03a3\u039c\u0395\u039d\u039f\u0399 \u03a3\u03a4\u039f\u039d ALPHA \u03a3\u03a4\u0397\u039d \u0395\u039a\u03a0\u039f\u039c\u03a0\u0397 \u03a3\u03a0\u0399\u03a4\u0399 \u039c\u039f\u03a5 \u03a3\u03a0\u0399\u03a4\u0391\u039a\u0399 \u039c\u039f\u03a5 \u039a\u0391\u0399 \u0398\u0391 \u039c\u0399\u039b\u0397\u03a3\u039f\u03a5\u039c\u0395 \u0393\u0399\u0391 \u03a4\u0397\u039d \u03a5\u03a0\u0395\u03a1\u039f\u03a7\u0397... http:\/\/t.co\/7rFZwrWO7u",
+            "UserName": "Alexis Dermitzakis",
+            "Date": "Fri May 22 20:21:20 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/534411696660815872\/1l8jlwaO_normal.jpeg",
+            "BelongsTo": "\u0394\u0395\u03a1\u039c\u0399\u03a4\u0396\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        }
+    ],
+    "links": [
+        {
+            "source": 1,
+            "target": 0
+        }
+    ]
+}

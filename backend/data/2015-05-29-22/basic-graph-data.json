@@ -1,0 +1,125 @@
+{
+    "nodes": [
+        {
+            "name": "main",
+            "size": "big",
+            "icon": "..\/backend\/assets\/center.png",
+            "Type": "M"
+        },
+        {
+            "name": "\u0394\u0397\u039c\u0397\u03a4\u03a1\u0399\u039f\u03a3 \u03a3\u03a4\u0391\u039c\u0391\u03a4\u0397\u03a3",
+            "hash": "f5eeeca23b26800f57a6118616c65f8fdbc6570b",
+            "size": "small",
+            "icon": "http:\/\/www.eklogika.gr\/uploads\/files\/ypiresiaki_kyvernisi\/stamatis_dimitris.jpg",
+            "Type": "D"
+        },
+        {
+            "name": "\u039d.\u0394.",
+            "hash": "20cdd9a7966e8cfbaacb313aa1801a194e52f816",
+            "size": "normal",
+            "icon": "\/nodenews\/backend\/assets\/nd.jpg",
+            "Type": "P"
+        },
+        {
+            "name": "\u0398\u0395\u039f\u0394\u03a9\u03a1\u0391 \u039c\u03a0\u0391\u039a\u039f\u0393\u0399\u0391\u039d\u039d\u0397",
+            "hash": "5bd2aab1b60902a4ea2e1ced492868193f358360",
+            "size": "small",
+            "icon": "http:\/\/www.iliatora.gr\/files\/news\/5740_ph1.jpg",
+            "Type": "D"
+        },
+        {
+            "name": "\u039a\u03a9\u039d\u03a3\u03a4\u0391\u039d\u03a4\u0399\u039d\u039f\u03a3 \u0394\u0395\u03a1\u039c\u0399\u03a4\u0396\u0391\u039a\u0397\u03a3",
+            "hash": "1d697f6fa6930cb02ab256e5b70dd2cde9bec426",
+            "size": "small",
+            "icon": "http:\/\/cretalive.s3.amazonaws.com\/images\/made\/-\/img\/bg\/680x382_680_382_imagesmadeimagesremotehttp_cretalive.s3.amazonaws.com49130kostis-dermitzakis_542_382_s.jpg.jpg",
+            "Type": "D"
+        },
+        {
+            "name": "\u03a3\u03a5\u03a1\u0399\u0396\u0391",
+            "hash": "ec593ff65124fb3c418ad097aea794a002e917bb",
+            "size": "normal",
+            "icon": "\/nodenews\/backend\/assets\/syriza.jpg",
+            "Type": "P"
+        },
+        {
+            "name": "\u03a3\u03a4\u0391\u03a5\u03a1\u039f\u03a3 \u0398\u0395\u039f\u0394\u03a9\u03a1\u0391\u039a\u0397\u03a3",
+            "hash": "4537c05f2de7ae6712ec0985787544ee576271fb",
+            "size": "small",
+            "icon": "http:\/\/www.iefimerida.gr\/sites\/default\/files\/theodorakis_6.jpg",
+            "Type": "D"
+        },
+        {
+            "name": "\u03a4\u039f \u03a0\u039f\u03a4\u0391\u039c\u0399",
+            "hash": "a539fb2c89f46ab7d5d2e903f11ee4f1230dc160",
+            "size": "normal",
+            "icon": "\/nodenews\/backend\/assets\/topotami.jpeg",
+            "Type": "P"
+        }
+    ],
+    "links": [
+        {
+            "source": 2,
+            "target": 1
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 0,
+            "target": 5
+        },
+        {
+            "source": 0,
+            "target": 7
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 2,
+            "target": 3
+        },
+        {
+            "source": 0,
+            "target": 5
+        },
+        {
+            "source": 0,
+            "target": 7
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 5,
+            "target": 4
+        },
+        {
+            "source": 0,
+            "target": 5
+        },
+        {
+            "source": 0,
+            "target": 7
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 0,
+            "target": 5
+        },
+        {
+            "source": 7,
+            "target": 6
+        },
+        {
+            "source": 0,
+            "target": 7
+        }
+    ]
+}
