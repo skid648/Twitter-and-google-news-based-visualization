@@ -1,0 +1,29 @@
+ @import url(http://fonts.googleapis.com/css?family=Roboto&subset=latin,greek-ext);
+ 
+ .node {
+        fill: rgba(0, 0, 0, 0);
+    }
+    
+    .link {
+        stroke: #f4d03f;
+        stroke-opacity: .9;
+    }
+    
+    .axis text {
+        font: 10px sans-serif;
+        fill: white;
+    }
+    
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: white;
+        shape-rendering: crispEdges;
+    }
+    
+    .driver {
+        stroke: #BADB73;
+    }
+    
+  
+}

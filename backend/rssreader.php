@@ -219,7 +219,7 @@
 				case "ΧΡΥΣΗ ΑΥΓΗ":
 					$dir = $dir."xa.jpg";
 					break;
-				case "ΑΝΕΞΑΡΤΗΤΟΙ ΕΛΛ�":
+				case "ΑΝΕΞΑΡΤΗΤΟΙ ΕΛΛΗΝΕΣ":
 					$dir = $dir."aneksarthtoi-ellhnes.jpg";
 					break;
 				case "Κ.Κ.Ε.":
@@ -297,7 +297,7 @@
 			    echo "<div class='error'>0 results, No deputies in Hot table!</div>";
 			}
 
-			$JSONnodes = Array("name" => "main","size" => "big","icon"=>"../backend/assets/center.png", "Type"=> "M");
+			$JSONnodes = Array("name" => "main","size" => "big","icon"=>"../nodenews/backend/assets/center.png", "Type"=> "M");
 			
 			$json = Array("nodes"=>Array(),"links" => Array());
 			array_push($json["nodes"], $JSONnodes);
@@ -419,7 +419,7 @@
 			$api_URL = 'https://api.twitter.com/1.1/search/tweets.json';
 			$API_parameters = '&lang=el&count=20';
 
-			$bearertok = "AAAAAAAAAAAAAAAAAAAAAC4CUAAAAAAAe4fo6tVR2jCYdwJ7yQ%2BKjlPIOmg%3DoeTz7MkA2F3fVOsTL9oEVhcLT2awxP03dwedxohbKCA";
+			$bearertok = "***************************************************************************************************";
 
 
 			

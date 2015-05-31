@@ -1,0 +1,236 @@
+{
+    "nodes": [
+        {
+            "Tweet": "Deputy",
+            "UserName": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "Date": "null",
+            "icon": "http:\/\/images32.inewsgr.com\/2040\/20403577\/1.jpg",
+            "BelongsTo": "null",
+            "size": "big",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0392\u03b1\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b7\u03c2: \u0388\u03c4\u03c3\u03b9 \u03b8\u03b1 \u03b2\u03b3\u03bf\u03cd\u03bc\u03b5 \u03be\u03b1\u03bd\u03ac \u03c3\u03c4\u03b9\u03c2 \u03b1\u03b3\u03bf\u03c1\u03ad\u03c2 | TVXS - TV \u03a7\u03c9\u03c1\u03af\u03c2 \u03a3\u03cd\u03bd\u03bf\u03c1\u03b1 http:\/\/t.co\/aJSIZNKdBB",
+            "UserName": "niktrah",
+            "Date": "Sat May 30 15:08:46 +0000 2015",
+            "icon": "http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0392\u03b1\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b7\u03c2: \u0394\u03b5\u03bd \u03c5\u03c0\u03bf\u03b3\u03c1\u03ac\u03c6\u03bf\u03c5\u03bc\u03b5 \u03bb\u03cd\u03c3\u03b7 \u03c7\u03c9\u03c1\u03af\u03c2 \u03b1\u03bd\u03b1\u03b4\u03b9\u03ac\u03c1\u03b8\u03c1\u03c9\u03c3\u03b7 \u03c7\u03c1\u03ad\u03bf\u03c5\u03c2 http:\/\/t.co\/D4Nghb7GuE",
+            "UserName": "\u0393\u03b9\u03ce\u03c1\u03b3\u03bf\u03c2 \u0392\u03bb\u03b1\u03c3\u03c4\u03cc\u03c2",
+            "Date": "Sat May 30 13:16:48 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/572414002836168704\/zPybNn6z_normal.jpeg",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u039f \u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u03a3 \u039a\u0391\u0399 \u039f \u039c\u03a0\u0391\u03a1\u039f\u03a5\u03a6\u0391\u03a3!!!https:\/\/t.co\/o5CGVHTDLA http:\/\/t.co\/XzIYrqoJ80",
+            "UserName": "\u0391\u039d\u03a4\u0399-jeffrey",
+            "Date": "Sat May 30 12:15:09 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/600818667169939456\/7KH6oOw2_normal.jpg",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0392\u03b1\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b7\u03c2: \u0398\u03b1 \u03ad\u03c7\u03bf\u03c5\u03bc\u03b5 \u03c3\u03c5\u03bc\u03c6\u03c9\u03bd\u03af\u03b1 - \u03c0\u03b1\u03ba\u03ad\u03c4\u03bf \u03ad\u03c9\u03c2 \u03c4\u03b9\u03c2 30 \u0399\u03bf\u03c5\u03bd\u03af\u03bf\u03c5 http:\/\/t.co\/SO0kGF27nI",
+            "UserName": "TV \u03a7\u03c9\u03c1\u03af\u03c2 \u03a3\u03cd\u03bd\u03bf\u03c1\u03b1",
+            "Date": "Fri May 29 09:40:02 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/573121355123585024\/0FVzxYLU_normal.png",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0392\u03b1\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b7\u03c2: \u0395\u03af\u03bc\u03b1\u03c3\u03c4\u03b5 \u03c0\u03bf\u03bb\u03cd \u03ba\u03bf\u03bd\u03c4\u03ac \u03c3\u03c4\u03b7 \u03c3\u03c5\u03bc\u03c6\u03c9\u03bd\u03af\u03b1 http:\/\/t.co\/p9iwfTgJGB",
+            "UserName": "TA NEA online",
+            "Date": "Fri May 29 08:45:36 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/485400295988400129\/ollRCYGf_normal.png",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "@yanisvaroufakis : \u0395\u03af\u03bc\u03b1\u03c3\u03c4\u03b5 \u03c0\u03bf\u03bb\u03cd \u03ba\u03bf\u03bd\u03c4\u03ac \u03c3\u03c4\u03b7 \u03c3\u03c5\u03bc\u03c6\u03c9\u03bd\u03af\u03b1 http:\/\/t.co\/dshv4gVPSL",
+            "UserName": "Antenna News",
+            "Date": "Fri May 29 08:44:42 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/522717332980776962\/Ad9VZLaz_normal.jpeg",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u03a7\u03b1\u03bc\u03cc\u03c2 \u03c3\u03c4\u03b7 \u0392\u03bf\u03c5\u03bb\u03ae \u03b1\u03c0\u03cc \u03c4\u03b7\u03bd \u03b4\u03b7\u03bc\u03bf\u03c3\u03b9\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03b7 \u03c4\u03b7\u03c2 \u03c3\u03c5\u03bc\u03c6\u03c9\u03bd\u03af\u03b1\u03c2 \u03c4\u03bf\u03c5 \u03a6\u03b5\u03b2\u03c1\u03bf\u03c5\u03b1\u03c1\u03af\u03bf\u03c5 \u03c0\u03bf\u03c5 \u03c5\u03c0\u03ad\u03b3\u03c1\u03b1\u03c8\u03b5 \u03bf \u0392\u03b1\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b7\u03c2 http:\/\/t.co\/tht4LUd7VB #\u03a0\u03bf\u03bb\u03b9\u03c4\u03b9\u03ba\u03b7",
+            "UserName": "thestival.gr",
+            "Date": "Fri May 29 05:17:36 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/523901374673600512\/Pi99XcqG_normal.jpeg",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "RT @kobougiaskostas: \u0392\u03b1\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b7\u03c2: \u0391\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b7 \u03c4\u03b5\u03bb\u03b5\u03c5\u03c4\u03b1\u03af\u03b1 \u03b4\u03b9\u03b1\u03c0\u03c1\u03b1\u03b3\u03bc\u03ac\u03c4\u03b5\u03c5\u03c3\u03b7 \u03b1\u03c0\u03ad\u03bd\u03b1\u03bd\u03c4\u03b9 \u03c3\u03c4\u03b7 \u03bc\u03bd\u03b7\u03bc\u03bf\u03bd\u03b9\u03b1\u03ba\u03ae \u03b1\u03bd\u03b1\u03bb\u03b3\u03b7\u03c3\u03af\u03b1 http:\/\/t.co\/Hq2zaWdVC3",
+            "UserName": "celeste chasapidi",
+            "Date": "Thu May 28 21:32:31 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/477548530416881664\/VgezzcGV_normal.jpeg",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0392\u03b1\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b7\u03c2: \u0391\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b7 \u03c4\u03b5\u03bb\u03b5\u03c5\u03c4\u03b1\u03af\u03b1 \u03b4\u03b9\u03b1\u03c0\u03c1\u03b1\u03b3\u03bc\u03ac\u03c4\u03b5\u03c5\u03c3\u03b7 \u03b1\u03c0\u03ad\u03bd\u03b1\u03bd\u03c4\u03b9 \u03c3\u03c4\u03b7 \u03bc\u03bd\u03b7\u03bc\u03bf\u03bd\u03b9\u03b1\u03ba\u03ae \u03b1\u03bd\u03b1\u03bb\u03b3\u03b7\u03c3\u03af\u03b1 http:\/\/t.co\/Hq2zaWdVC3",
+            "UserName": "\u039a\u03bf\u03bc\u03c0\u03bf\u03cd\u03b3\u03b9\u03b1\u03c2 \u039a\u03ce\u03c3\u03c4\u03b1\u03c2",
+            "Date": "Thu May 28 21:25:11 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/3282405258\/baa7dbc14d42c1b17d57efe7e3ede28f_normal.jpeg",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0392\u03b1\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b7\u03c2: \u0391\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b7 \u03c4\u03b5\u03bb\u03b5\u03c5\u03c4\u03b1\u03af\u03b1 \u03b4\u03b9\u03b1\u03c0\u03c1\u03b1\u03b3\u03bc\u03ac\u03c4\u03b5\u03c5\u03c3\u03b7 \u03b1\u03c0\u03ad\u03bd\u03b1\u03bd\u03c4\u03b9 \u03c3\u03c4\u03b7 \u03bc\u03bd\u03b7\u03bc\u03bf\u03bd\u03b9\u03b1\u03ba\u03ae \u03b1\u03bd\u03b1\u03bb\u03b3\u03b7\u03c3\u03af\u03b1 [\u0392\u0399\u039d\u03a4\u0395\u039f] http:\/\/t.co\/TcQfG7YIN2",
+            "UserName": "TV \u03a7\u03c9\u03c1\u03af\u03c2 \u03a3\u03cd\u03bd\u03bf\u03c1\u03b1",
+            "Date": "Thu May 28 20:12:02 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/573121355123585024\/0FVzxYLU_normal.png",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "RT @tvxs: \u0392\u03b1\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b7\u03c2: \u0391\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b7 \u03c4\u03b5\u03bb\u03b5\u03c5\u03c4\u03b1\u03af\u03b1 \u03b4\u03b9\u03b1\u03c0\u03c1\u03b1\u03b3\u03bc\u03ac\u03c4\u03b5\u03c5\u03c3\u03b7 \u03b1\u03c0\u03ad\u03bd\u03b1\u03bd\u03c4\u03b9 \u03c3\u03c4\u03b7 \u03bc\u03bd\u03b7\u03bc\u03bf\u03bd\u03b9\u03b1\u03ba\u03ae \u03b1\u03bd\u03b1\u03bb\u03b3\u03b7\u03c3\u03af\u03b1 http:\/\/t.co\/bQELzJCu2x",
+            "UserName": "angeliki_",
+            "Date": "Thu May 28 19:40:41 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/597394634302717952\/OA1k9PcQ_normal.jpg",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0392\u03b1\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b7\u03c2: \u0391\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b7 \u03c4\u03b5\u03bb\u03b5\u03c5\u03c4\u03b1\u03af\u03b1 \u03b4\u03b9\u03b1\u03c0\u03c1\u03b1\u03b3\u03bc\u03ac\u03c4\u03b5\u03c5\u03c3\u03b7 \u03b1\u03c0\u03ad\u03bd\u03b1\u03bd\u03c4\u03b9 \u03c3\u03c4\u03b7 \u03bc\u03bd\u03b7\u03bc\u03bf\u03bd\u03b9\u03b1\u03ba\u03ae \u03b1\u03bd\u03b1\u03bb\u03b3\u03b7\u03c3\u03af\u03b1 http:\/\/t.co\/bQELzJCu2x",
+            "UserName": "TV \u03a7\u03c9\u03c1\u03af\u03c2 \u03a3\u03cd\u03bd\u03bf\u03c1\u03b1",
+            "Date": "Thu May 28 11:29:52 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/573121355123585024\/0FVzxYLU_normal.png",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0388\u03be\u03c9 \u03c6\u03c1\u03b5\u03bd\u03ce\u03bd \u03bf \u0392\u03b1\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b7\u03c2 \u03bc\u03b5 \u03c4\u03bf\u03bd \u039a\u03b1\u03c3\u03b9\u03b4\u03b9\u03ac\u03c1\u03b7\n\n\u0394\u03b5\u03af\u03c4\u03b5 \u03b2\u03af\u03bd\u03c4\u03b5\u03bf \u03bc\u03b5 \u03c4\u03bf\u03bd \u03ba\u03b1\u03b2\u03b3\u03ac \u03c3\u03c4\u03b7 \u0392\u03bf\u03c5\u03bb\u03ae.\n\nhttp:\/\/t.co\/Mo8gddKEHy http:\/\/t.co\/kc4iS7Y4qq",
+            "UserName": "Sportdog.gr",
+            "Date": "Thu May 28 10:57:52 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/2874319082\/f8a4cf9fc90365b576350996d6075c42_normal.png",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "@yanisvaroufakis : \u0391\u03bd\u03ac\u03bb\u03b3\u03b7\u03c4\u03b7 \u03b7 \u03c3\u03c4\u03ac\u03c3\u03b7 \u03c4\u03c9\u03bd \u03b5\u03c4\u03b1\u03af\u03c1\u03c9\u03bd \u03c3\u03c4\u03b9\u03c2 \u03b1\u03bd\u03ac\u03b3\u03ba\u03b5\u03c2 \u03c4\u03c9\u03bd \u03bd\u03b7\u03c3\u03b9\u03ce\u03bd \u03bc\u03b1\u03c2 http:\/\/t.co\/vpixOmcilW",
+            "UserName": "Antenna News",
+            "Date": "Thu May 28 10:40:42 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/522717332980776962\/Ad9VZLaz_normal.jpeg",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0388\u03be\u03c9 \u03c6\u03c1\u03b5\u03bd\u03ce\u03bd \u03bf \u0392\u03b1\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b7\u03c2 \u03bc\u03b5 \u03c4\u03bf\u03bd \u039a\u03b1\u03c3\u03b9\u03b4\u03b9\u03ac\u03c1\u03b7 http:\/\/t.co\/Mo8gddKEHy http:\/\/t.co\/xd1FBUeGSs",
+            "UserName": "Sportdog.gr",
+            "Date": "Thu May 28 10:30:51 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/2874319082\/f8a4cf9fc90365b576350996d6075c42_normal.png",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "RT @CorinaVasilopou: \u0392\u03b1\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b7\u03c2: \u0394\u03b5\u03bd \u03b8\u03b1 \u03b4\u03b9\u03b5\u03ba\u03b4\u03b9\u03ba\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b9\u03c2 \u03b1\u03c0\u03bf\u03b6\u03b7\u03bc\u03b9\u03ce\u03c3\u03b5\u03b9\u03c2 \u03b1\u03c0\u03cc \u03bc\u03b1\u03b8\u03b7\u03c4\u03ad\u03c2 \u03b3\u03b9\u03b1 \u03c4\u03b1 \u03b5\u03c0\u03b5\u03b9\u03c3\u03cc\u03b4\u03b9\u03b1 \u03bc\u03b5\u03c4\u03ac \u03c4\u03b7 \u03b4\u03bf\u03bb\u03bf\u03c6\u03bf\u03bd\u03af\u03b1 \u0393\u03c1\u03b7\u03b3\u03bf\u03c1\u03cc\u03c0\u03bf\u03c5\u03bb\u03bf\u03c5. http:\/\u2026",
+            "UserName": "Paulette Marrero",
+            "Date": "Wed May 27 10:35:40 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/604516965172920320\/Y5jiKskK_normal.jpg",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        },
+        {
+            "Tweet": "\u0395\u03c0\u03b1\u03bd\u03ad\u03c6\u03b5\u03c1\u03b5 \u03c4\u03b7\u03bd \u03c4\u03c1\u03cc\u03b9\u03ba\u03b1 \u03bf @yanisvaroufakis \u2026  http:\/\/t.co\/SRltD9xugZ",
+            "UserName": "Antenna News",
+            "Date": "Wed May 27 10:24:05 +0000 2015",
+            "icon": "http:\/\/pbs.twimg.com\/profile_images\/522717332980776962\/Ad9VZLaz_normal.jpeg",
+            "BelongsTo": "\u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "size": "small",
+            "name": "basic-graph"
+        }
+    ],
+    "links": [
+        {
+            "source": 1,
+            "target": 0
+        },
+        {
+            "source": 2,
+            "target": 0
+        },
+        {
+            "source": 3,
+            "target": 0
+        },
+        {
+            "source": 4,
+            "target": 0
+        },
+        {
+            "source": 5,
+            "target": 0
+        },
+        {
+            "source": 6,
+            "target": 0
+        },
+        {
+            "source": 7,
+            "target": 0
+        },
+        {
+            "source": 8,
+            "target": 0
+        },
+        {
+            "source": 9,
+            "target": 0
+        },
+        {
+            "source": 10,
+            "target": 0
+        },
+        {
+            "source": 11,
+            "target": 0
+        },
+        {
+            "source": 12,
+            "target": 0
+        },
+        {
+            "source": 13,
+            "target": 0
+        },
+        {
+            "source": 14,
+            "target": 0
+        },
+        {
+            "source": 15,
+            "target": 0
+        },
+        {
+            "source": 16,
+            "target": 0
+        },
+        {
+            "source": 17,
+            "target": 0
+        }
+    ]
+}

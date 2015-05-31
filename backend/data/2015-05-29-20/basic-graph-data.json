@@ -3,7 +3,7 @@
         {
             "name": "main",
             "size": "big",
-            "icon": "..\/backend\/assets\/center.png",
+            "icon": "..\/nodenews\/backend\/assets\/center.png",
             "Type": "M"
         },
         {

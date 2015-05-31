@@ -1,0 +1,14 @@
+{
+    "nodes": [
+        {
+            "Tweet": "Deputy",
+            "UserName": "\u03a3\u039c\u0399\u0391\u03a3",
+            "Date": "null",
+            "icon": "http:\/\/www.ypopsifios.gr\/images\/headers\/SMIAS.png",
+            "BelongsTo": "null",
+            "size": "big",
+            "name": "basic-graph"
+        }
+    ],
+    "links": []
+}

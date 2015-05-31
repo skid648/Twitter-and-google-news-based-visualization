@@ -1,0 +1,140 @@
+{
+    "nodes": [
+        {
+            "name": "main",
+            "size": "big",
+            "icon": "..\/nodenews\/backend\/assets\/center.png",
+            "Type": "M"
+        },
+        {
+            "name": "\u0394\u0397\u039c\u0397\u03a4\u03a1\u0399\u039f\u03a3 \u0392\u0399\u03a4\u03a3\u0391\u03a3",
+            "hash": "a11457d0ea7e44e4753e93dde933dae4ee4cc7ce",
+            "size": "small",
+            "icon": "http:\/\/static.pblogs.gr\/f\/254590-s5_high.jpg",
+            "Type": "D"
+        },
+        {
+            "name": "\u03a3\u03a5\u03a1\u0399\u0396\u0391",
+            "hash": "ec593ff65124fb3c418ad097aea794a002e917bb",
+            "size": "normal",
+            "icon": "\/nodenews\/backend\/assets\/syriza.jpg",
+            "Type": "P"
+        },
+        {
+            "name": "\u0395\u03a5\u039a\u039b\u0395\u0399\u0394\u0397\u03a3 \u03a4\u03a3\u0391\u039a\u0391\u039b\u03a9\u03a4\u039f\u03a3",
+            "hash": "16e7d0c54f82094e406491cee5c81efed05e0788",
+            "size": "small",
+            "icon": "http:\/\/www.newmoney.gr\/media\/k2\/items\/cache\/f5aee5f4148adfff00fdebdedc794929_XL.jpg?t=1422826027",
+            "Type": "D"
+        },
+        {
+            "name": "\u0399\u03a9\u0391\u039d\u039d\u0397\u03a3 \u0392\u0391\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0397\u03a3",
+            "hash": "6b964b326b1700380d37de74e8573cb3c236cd86",
+            "size": "small",
+            "icon": "http:\/\/images32.inewsgr.com\/2040\/20403577\/1.jpg",
+            "Type": "D"
+        },
+        {
+            "name": "\u0399\u03a9\u0391\u039d\u039d\u0397\u03a3 \u0394\u03a1\u0391\u0393\u0391\u03a3\u0391\u039a\u0397\u03a3",
+            "hash": "8ca4373b0363cf642ea847d1f5786bc0047a511f",
+            "size": "small",
+            "icon": "http:\/\/www.balkaneu.com\/wp-content\/uploads\/2014\/10\/gr10-565x404.jpg",
+            "Type": "D"
+        },
+        {
+            "name": "\u039a\u03a9\u039d\u03a3\u03a4\u0391\u039d\u03a4\u0399\u039d\u039f\u03a3 \u039b\u0391\u03a0\u0391\u0392\u0399\u03a4\u03a3\u0391\u03a3",
+            "hash": "c66ad28a68dfd3aa8b38ad4674ea1e398effd580",
+            "size": "small",
+            "icon": "http:\/\/tvxs.gr\/sites\/default\/files\/article\/2012\/09\/86432-lapavitsas.jpg",
+            "Type": "D"
+        },
+        {
+            "name": "\u03a3\u03a4\u0391\u03a5\u03a1\u039f\u03a3 \u0398\u0395\u039f\u0394\u03a9\u03a1\u0391\u039a\u0397\u03a3",
+            "hash": "4537c05f2de7ae6712ec0985787544ee576271fb",
+            "size": "small",
+            "icon": "http:\/\/www.iefimerida.gr\/sites\/default\/files\/theodorakis_6.jpg",
+            "Type": "D"
+        },
+        {
+            "name": "\u03a4\u039f \u03a0\u039f\u03a4\u0391\u039c\u0399",
+            "hash": "a539fb2c89f46ab7d5d2e903f11ee4f1230dc160",
+            "size": "normal",
+            "icon": "\/nodenews\/backend\/assets\/pasok.jpg",
+            "Type": "P"
+        }
+    ],
+    "links": [
+        {
+            "source": 2,
+            "target": 1
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 0,
+            "target": 8
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 2,
+            "target": 3
+        },
+        {
+            "source": 0,
+            "target": 8
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 2,
+            "target": 4
+        },
+        {
+            "source": 0,
+            "target": 8
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 2,
+            "target": 5
+        },
+        {
+            "source": 0,
+            "target": 8
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 2,
+            "target": 6
+        },
+        {
+            "source": 0,
+            "target": 8
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 8,
+            "target": 7
+        },
+        {
+            "source": 0,
+            "target": 8
+        }
+    ]
+}
