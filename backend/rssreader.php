@@ -101,8 +101,9 @@
 
 
 		$time = time();
+		echo  "<font style='font-size:200px'>".$time."</font>";
 		$timeFormated = date("Y-m-d-H",$time);
-		
+		echo  "<font style='font-size:200px'>".$timeFormated."</font>";
 
 		getFeed($url,$vouleutes,$conn);											//Get the feed!
 
@@ -297,7 +298,7 @@
 			    echo "<div class='error'>0 results, No deputies in Hot table!</div>";
 			}
 
-			$JSONnodes = Array("name" => "main","size" => "big","icon"=>"../nodenews/backend/assets/center.png", "Type"=> "M");
+			$JSONnodes = Array("name" => "main","size" => "big","icon"=>"backend/assets/center.png", "Type"=> "M");
 			
 			$json = Array("nodes"=>Array(),"links" => Array());
 			array_push($json["nodes"], $JSONnodes);
@@ -391,6 +392,7 @@
 			print_r($json_encoded);
 			echo "</div>";
 			$dir = "data/".$timestamp;
+			echo "<font style='font-size:200px'>".$timestamp."</font>";
 
 			echo"<div class='error'> <p>MKDIR ERROR</p><hr>";
 			    mkdir($dir);
@@ -419,7 +421,7 @@
 			$api_URL = 'https://api.twitter.com/1.1/search/tweets.json';
 			$API_parameters = '&lang=el&count=20';
 
-			$bearertok = "***************************************************************************************************";
+			$bearertok = "AAAAAAAAAAAAAAAAAAAAAC4CUAAAAAAAe4fo6tVR2jCYdwJ7yQ%2BKjlPIOmg%3DoeTz7MkA2F3fVOsTL9oEVhcLT2awxP03dwedxohbKCA";
 
 
 			
@@ -462,6 +464,7 @@
 		 		$user_id = $tweet["user"]["name"];
 				$datetime = $tweet["created_at"];
 				$profile_image = $tweet["user"]['profile_image_url'];
+				$screen_name = $tweet["user"]["screen_name"];
 		        //$stripped_tweet = preg_replace('/(#|@)\S+|(RT:)|(RT)/', '', $text_tweet); // remove hashtags
 		        //$stripped_tweet = preg_replace('#\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))#', '', $stripped_tweet);
 				//$stripped_tweet = trim(preg_replace('/\s+/', ' ', $stripped_tweet ));
@@ -480,7 +483,7 @@
 
 				        }else{
 
-				        array_push($tweets_array,Array("Tweet"=>$stripped_tweet,"UserName"=>$user_id,"Date"=>$datetime,"icon"=>$profile_image,"BelongsTo"=>$originalName,"size"=>"small","name"=>"basic-graph"));
+				        array_push($tweets_array,Array("Tweet"=>$stripped_tweet,"UserName"=>$user_id,"ScreenName"=>$screen_name,"Date"=>$datetime,"icon"=>$profile_image,"BelongsTo"=>$originalName,"size"=>"small","name"=>"basic-graph"));
 
 				        }
 

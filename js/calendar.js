@@ -91,7 +91,7 @@ $(".month").click(function() {
   });
 
   $("#calendarHeader").animate({
-    marginBottom: "50px"
+    marginBottom: "70px"
     
 
   });

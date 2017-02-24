@@ -26,9 +26,85 @@
 	.screenshots ul li{width:100%;min-height:100%;float:none;}
 	section.video i{font-size:30px;}
 	section.video h1{font-size:15px;font-weight:400;}
-	section.video{padding:40px;}
+	section.video{}
 	.feature-content{width:100%;text-align:center;margin-top:20px;}
 	.feature-icon{display:block;margin:0 auto;}
 	blockquote p{width:60%;}
 	.features-slider {padding: 11% 50px 10% 50px;}
+}
+
+@media screen and (max-width:800px){
+	.tweet{
+		right:0px !important;
+		top: -680px !important;
+		  width: 100% !important;
+	}
+	.hero{
+		display:none;
+	}
+	.features-intro{
+		display:none;
+	}
+	.features-list{
+		display:none;
+	}
+	.showcase{
+		display:none;
+	}
+	.screenshots-intro{
+		display:none;
+	}
+	.screenshots{
+		display:none;
+	}
+	.download{
+		display:none;
+	}
+	footer{
+		display:none;
+	}
+	svg{
+		/*padding-top: 20%;*/
+	}
+	.tweet #Tweet_head{
+		padding-top:20px;
+		margin-top: 15px;
+	}
+	#calendarHeader{
+		  margin-top: -200px;
+		  font-size: 40px !important;
+
+	}
+	#instructions{
+		display: none;
+	}
+	.open{
+		background-color: transparent !important;
+		font-size: 22px !important;
+	}
+	.days31{
+		font-size: 20px !important;
+	}
+	.days30{
+		font-size: 20px !important;
+	}
+	.hours{
+		font-size: 20px !important;
+	}
+	#daypicker{
+		width: 105% !important;
+	}
+	#refresh{
+		display: block !important;
+		position: fixed;
+		left: -25px;
+		top: 10%;
+		font-size: 40px;
+  color: white;
+  background-color: rgba(0,0,0,0.19);
+  /* padding-left: 50px; */
+  padding: 10px 10px 10px 50px;
+  border-radius: 10px 20px 20px 10px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+	}
 }
